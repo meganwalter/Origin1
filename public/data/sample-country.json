@@ -1,0 +1,12 @@
+[
+  {
+    "month": 1,
+    "monthName":"January",
+    "year":2016,
+    "precipitationPercent": 0.30,
+    "averageTemp": 25,
+    "humidity": 39,
+    "altitude": 2200,
+    "plantHealth": 9.7
+  }
+]

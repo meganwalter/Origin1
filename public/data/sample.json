@@ -1,10 +1,12 @@
-{
-  'month': 1,
-  'month-name':'January',
-  'year':2016,
-  'precipitation-percent': 0.25,
-  'average-temp': 20,
-  'humidity': 40,
-  'altitude': 2300,
-  'plant-health': 9.9,
-}
+[
+  {
+  "month": 1,
+  "monthName":"January",
+  "year":2016,
+  "precipitationPercent": 0.25,
+  "averageTemp": 20,
+  "humidity": 40,
+  "altitude": 2300,
+  "plantHealth": 9.9
+  }
+]
