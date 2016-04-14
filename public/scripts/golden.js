@@ -1,31 +1,35 @@
-var goldStnd = [];
+(function(module) {
 
-var countryOne = [];
+  var goldStnd = {};
 
-function getData() {
+  goldStnd.all = [];
 
-  $.ajax(
-    {
-      url: '../data/sample.json',
-      type: 'GET',
-      success: function(data) {
-        goldStnd = data;
-        console.log(goldStnd);
-      },
+  goldStnd.getData = function() {
 
-      error: function() {
-        console.error();
-      },
-    })
-    .done(function(n) {
-      getval(goldStnd[0], 'humidity');
-      keysArr(goldStnd[0]);
-    }
-  );
-}
+    $.ajax(
+      {
+        url: '../data/sample.json',
+        type: 'GET',
+        success: function(data) {
+          goldStnd.all = data;
+          console.log(goldStnd);
+        },
 
-getData();
+        error: function() {
+          console.error();
+        },
+      })
+      .done(function(n) {
+        // doanotherthing();
+      }
+    );
+  };
 
-var getval = function(thisObj, property) {
-  console.log(thisObj[property]);
-}
+  // var getval = function(thisObj, property) {
+  //   console.log(thisObj[property]);
+  // };
+
+  module.goldStnd = goldStnd;
+  goldStnd.getData();
+
+})(window);

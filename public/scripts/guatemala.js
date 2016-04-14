@@ -1,15 +1,17 @@
 (function(module) {
 
-var guatemala = [];
+var guatemala = {};
 
-function getData() {
+guatemala.all = [];
+
+guatemala.getData = function() {
 
   $.ajax(
     {
       url: '../data/sample-country.json',
       type: 'GET',
       success: function(data) {
-        guatemala = data;
+        guatemala.all = data;
         console.log(guatemala);
       },
 
@@ -18,17 +20,17 @@ function getData() {
       },
     })
     .done(function(n) {
-      getval(guatemala[0], 'humidity');
+      
     }
   );
-}
-
-getData();
+};
 
 var getval = function(thisObj, property) {
   console.log(thisObj[property]);
-}
+};
 
 module.guatemala = guatemala;
 
-}(window);
+guatemala.getData();
+
+})(window);
