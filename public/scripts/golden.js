@@ -20,16 +20,11 @@
         },
       })
       .done(function(n) {
-        // doanotherthing();
+        // put function here
       }
     );
   };
 
-  // var getval = function(thisObj, property) {
-  //   console.log(thisObj[property]);
-  // };
-
   module.goldStnd = goldStnd;
-  goldStnd.getData();
 
 })(window);

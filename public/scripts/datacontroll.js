@@ -1,24 +1,31 @@
 (function(module) {
+  var controller = {};
 
-  function dothis() {
+  controller.compareProps = function(month, monthTwo) {
+    for (var x in month) {
+      console.log(month[x] - monthTwo[x]);
+    }
+  };
 
-    guatemala.getData();
-    goldStnd.getData();
-  }
+  controller.compareAll = function(arr) {
+    arr.forEach(function() {
+      var a = guatemala.all[0].this;
+      var b = goldStnd.all[0].this;
+      console.log(Math.abs(a - b));
+      return Math.abs(a - b);
+    });
+  };
 
-  function doanotherthing() {
-    var a = guatemala.all[0].humidity;
-    var b = goldStnd.all[0].humidity;
-    console.log(Math.abs(a - b));
-    return Math.abs(a - b);
-  }
+  controller.getData = function(standard, country) {
+    country.getData();
+    standard.getData();
+  };
 
-  // doanotherthing();
 
-  module.doanotherthing = doanotherthing;
   $(document).ajaxStop(function() {
-
-    doanotherthing();
+    controller.compareProps(guatemala.all[0], goldStnd.all[0]);
+    // controller.compareAll();
   });
 
+  module.controller = controller;
 })(window);
