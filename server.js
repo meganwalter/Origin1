@@ -1,3 +1,9 @@
+var Forecast = require('forecast.io');
+
+var options = {
+  APIKey: process.env.FORECAST_API_KEY
+},
+
 var requestProxy = require('express-request-proxy'),
   express = require('express'),
   port = process.env.PORT || 3000,
