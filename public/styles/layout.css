@@ -1,4 +1,7 @@
-.bgVid {
+.videoContainer {
   width: 98.7%;
+  position: absolute;
+}
+.naveEle {
   position: fixed;
 }
