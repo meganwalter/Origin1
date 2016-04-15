@@ -7,10 +7,20 @@
     <link rel="stylesheet" href="styles/layout.css" media="screen" charset="utf-8">
   </head>
   <body>
-    <video class="bgVid" src="media/videos/vidTest.mp4" autoplay poster="posterimage.jpg">
+
+    <video class="bgVid tab" src="media/videos/vidTest.mp4" autoplay poster="posterimage.jpg">
+      <nav>
+        <section class="naveEle">
+          <ul>
+            <li class="tab" data-content="home"><a href="/">home</a></li>
+            <li class="tab" data-content="coffee"><a href="/coffee">coffee</a></li>
+            <li class="tab" data-content="contact"><a href="/contact">contact</a></li>
+          </ul>
+      </section>
+      </nav>
 
     </video>
-    <form id="contact">
+    <form class="tab-content" id="contact">
       <fieldset>
         <legend><h3>Contact Us</h3></legend>
         <label> Name:
@@ -33,6 +43,12 @@
       </fieldset>
     </form>
     <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+    <script src="/vendors/scripts/page.js" charset="utf-8"></script>
+
+    <script src="/scripts/contactController.js" charset="utf-8"></script>
+    <script src="/scripts/contactView.js" charset="utf-8"></script>
+    <script src="/scripts/routes.js" charset="utf-8"></script>
+
     <script src="/data/sample.json" charset="utf-8"></script>
     <script src="/data/sample-country.json" charset="utf-8"></script>
     <script src="/scripts/golden.js" charset="utf-8"></script>

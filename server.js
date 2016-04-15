@@ -1,9 +1,9 @@
 var Forecast = require('forecast.io');
 
-var options = {
-  APIKey: process.env.FORECAST_API_KEY
-},
-forecast = new Forecast(options);
+// var options = {
+//   APIKey: process.env.FORECAST_API_KEY
+// },
+// forecast = new Forecast(options);
 
 // var time = new Date().setDate(0);
 // forecast.getAtTime(latitude, longitude, time, function(err, res, data) {
