@@ -1,7 +1,18 @@
+.header {
+  width: 100%;
+  position: absolute;
+}
 .videoContainer {
   width: 98.7%;
   position: absolute;
 }
+ul {
+  list-style: none;
+}
 .naveEle {
-  position: fixed;
+  z-index: 1;
+  position:absolute;
+}
+li {
+  text-decoration: none;
 }
