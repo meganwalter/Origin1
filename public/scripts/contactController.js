@@ -6,6 +6,5 @@
     $('#contact').fadeIn(500);
   }
 
-
-  module.contactController = aboutController;
+  module.contactController = contactController;
 })(window)
