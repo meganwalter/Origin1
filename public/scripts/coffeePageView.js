@@ -6,6 +6,7 @@ function Coffee(infoObj) {
   this.countryBio = infoObj.countryBio;
   this.featuredCoffeePic = infoObj.featuredCoffeePic;
   this.featuredRoasterBio = infoObj.featuredRoasterBio;
+  this.map = infoObj.map;
   this.brewPic = infoObj.brewPic;
   this.brewInstructions = infoObj.brewInstructions;
 };

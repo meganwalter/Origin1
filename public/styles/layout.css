@@ -81,6 +81,12 @@ color: purple;
   border: 1px dashed red;
   display: flex;
 }
+#mapBox {
+  border: 1px dashed black;
+  height: 33em;
+  background-size: cover; 
+}
+
 #featuredCoffee{
   background-color: slategrey;
 }
