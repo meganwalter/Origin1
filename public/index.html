@@ -6,6 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/layout.css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="vendors/styles/normalize.css" media="screen" charset="utf-8">
+
+  <script id="coffeePageTemplate" type="text/x-handlebars-template">
+    <section class="coffeePages" id="featuredCoffee">
+        <section class="sideBar featuredEls" id="regionInfo">{{countryBio}}</section>
+        <section class="featuredEls" id="goldenCoffee">
+          <img src="{{featuredCoffeePic}}" alt="not found" />
+        </section>
+        <section class="sideBar featuredEls" id="roasterInfo">{{featuredRoasterBio}}</section>
+    </section>
+    <section class="coffeePages" id="coffeeMap">
+      <section id="mapContainer">
+        <ul id="mapMonths">
+          <li class="mapLi">january</li>
+          <li class="mapLi">january</li>
+          <li class="mapLi">january</li>
+          <li class="mapLi">january</li>
+          <li class="mapLi">january</li>
+          <li class="mapLi">january</li>
+          <li class="mapLi">january</li>
+          <li class="mapLi">january</li>
+          <li class="mapLi">january</li>
+          <li class="mapLi">january</li>
+          <li class="mapLi">january</li>
+          <li class="mapLi">january</li>
+        </ul>
+      </section>
+    </section>
+    <section class="coffeePages" id="brewMethods">
+      <section id="methodsContainer">
+        <section class="methodEls" id="brewImage">
+          <img src="{{brewPic}}" alt="not found" />
+        </section>
+        <section class="methodEls" id="brewSteps">{{brewInstructions}}</section>
+      </section>
+    </section>
+  </script>
+
+
+
   </head>
   <body>
     <header class="tab header">
@@ -35,12 +74,18 @@
 
     <section id="coffeePage" class="tab">
       <body>
-        <section class="coffeePages" id="featuredCoffee">
-            <section class="sideBar featuredEls" id="regionInfo"></section>
-            <section class="featuredEls" id="goldenCoffee"></section>
-            <section class="sideBar featuredEls" id="roasterInfo"></section>
+        <section id="goldenInfo">
+
         </section>
-        <section class="coffeePages" id="coffeeMap">
+
+        <!-- <section class="coffeePages" id="featuredCoffee">
+            <section class="sideBar featuredEls" id="regionInfo">{{countryBio}}</section>
+            <section class="featuredEls" id="goldenCoffee">
+              <img src="{{featuredCoffeePic}}" alt="not found" />
+            </section>
+            <section class="sideBar featuredEls" id="roasterInfo">{{featuredRoasterBio}}</section>
+        </section> -->
+        <!-- <section class="coffeePages" id="coffeeMap">
           <section id="mapContainer">
             <ul id="mapMonths">
               <li class="mapLi">january</li>
@@ -60,10 +105,11 @@
         </section>
         <section class="coffeePages" id="brewMethods">
           <section id="methodsContainer">
-            <section class="methodEls" id="brewImage"></section>
+            <section class="methodEls" id="brewImage">
+            </section>
             <section class="methodEls" id="brewSteps"></section>
           </section>
-        </section>
+        </section> -->
       </body>
     </section>
 
@@ -106,10 +152,13 @@
       <h3>I'm the footer</h3>
     </footer>
     <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
     <script src="/vendors/scripts/page.js" charset="utf-8"></script>
 
     <script src="/scripts/contactController.js" charset="utf-8"></script>
     <script src="/scripts/contactView.js" charset="utf-8"></script>
+    <script src="/scripts/coffeePageView.js" charset="utf-8"></script>
+    <script src="/scripts/infoData.js" charset="utf-8"></script>
     <script src="/scripts/coffeePageController.js" charset="utf-8"></script>
     <script src="/scripts/routes.js" charset="utf-8"></script>
 
