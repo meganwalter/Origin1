@@ -34,30 +34,39 @@
 
     </section>
 
-    <section class="tab-content" id="contact">
-    <h1>Contact Us</h1>
-    <p>Feel free to contact us using the form below. We’ll respond to you shortly.</p>
+    <section class="tab-content tab" id="contact">
+      <h1>Contact Us</h1>
+      <p>Feel free to contact us using the form below. We’ll respond to you shortly.</p>
+      <div id="filters">
+        <select name="formTopic">
+          <option value="option">Select a topic</option>
+          <option value="general">General Inquiry</option>
+          <option value="donation">Donation</option>
+          <option value="complain">Complain</option>
+        </select>
+      </div><br>
       <form>
-          <label> First Name:
-            <input type="text" id="fname" placeholder="First Name" required>
-          </label> <br>
-          <label> Last Name:
-            <input type="text" id="lname" placeholder="Last Name" required>
-          </label> <br>
-          <label> Email Address:
-            <input type="text" id="email" placeholder="Email Address" required>
-          </label> <br>
-          <label> Phone Number:
-            <input type="text" id="phone" placeholder="123-456-789">
-          </label> <br>
-          <label> Questions:
-            <br>
-            <textarea id="questions" rows="5" cols="50" placeholder="Questions"></textarea>
-          </label> <br>
-          <label> Subscribe to our newsletter
-            <input type="checkbox" id ="subscribe">
-          </label> <br>
+        <label>
+          <input type="text" class="formInput" placeholder="First Name" maxlength="30"required>
+        </label> <br>
+        <label>
+          <input type="text" class="formInput" placeholder="Last Name" maxlength="30" required>
+        </label> <br>
+        <label>
+          <input type="text" class="formInput" placeholder="Email Address" maxlength="30"required>
+        </label> <br>
+        <label>
+          <input type="text" class="formInput" placeholder="Phone Number" maxlength="30">
+        </label> <br>
+        <label>
+          <textarea class="formInput" rows="1"  placeholder="Questions"></textarea>
+        </label> <br>
+        <label> Subscribe to our newsletter
+          <input type="checkbox" id ="subscribe">
+        </label> <br>
+        <div id="submit">
           <button type="submit" id="submitButton" name="button">Submit</button>
+        </div>
       </form>
     </section>
     <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>

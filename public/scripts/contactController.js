@@ -7,7 +7,7 @@
     $('.header').fadeIn(500);
     $('.nav').fadeIn(500);
 
-  }
+  };
 
   module.contactController = contactController;
-})(window)
+})(window);
