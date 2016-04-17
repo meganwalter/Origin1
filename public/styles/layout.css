@@ -118,6 +118,26 @@ color: purple;
 #brewMethods {
   background-color: slategrey;
 }
+#methodsContainer {
+  border: 1px dashed blue;
+  width: 80%;
+  height: 35em;
+  margin-left: 10%;
+  margin-top: 7%;
+}
+.methodEls {
+  display: inline-block;
+}
+#brewImage {
+  border: 1px dashed green;
+  width: 29%;
+  height: 35em;
+}
+#brewSteps {
+  border: 1px dashed yellow;
+  width: 70%;
+  height: 35em;
+}
 #contact{
   text-align: center;
 }
