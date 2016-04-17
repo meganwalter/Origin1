@@ -2,19 +2,66 @@
   width: 100%;
   position: absolute;
 }
-.videoContainer {
-  width: 98.7%;
-  position: absolute;
-}
 ul {
   list-style: none;
 }
 .naveEle {
-  z-index: 1;
+  z-index: 2;
   position:absolute;
 }
 li {
   text-decoration: none;
+}
+h2 {
+  font-size: 2em;
+  color: white;
+}
+.videoContainer {
+  width: 98.7%;
+  position: absolute;
+  z-index: 1;
+}
+.homeBodyBox {
+  width: 100%;
+  height: 48.5%;
+  margin-top: 30%;
+  background-color: hsla(34, 18%, 8%, 0.95);
+  z-index: 3;
+  position: absolute;
+}
+#cs {
+  font-size: .6em;
+}
+.logo {
+  position: absolute;
+  z-index: 4;
+  border: 2px solid white;
+  width: 9em;
+  height: 4.5em;
+  text-align: center;
+  margin-left: 42%;
+  margin-top: -2%;
+}
+#origin1H1 {
+  font-size: 1.5em;
+  color: white;
+  line-height: .6em;
+  margin-top: 18%;
+}
+.homeQuote {
+  color: white;
+  text-align: center;
+  width: 45%;
+  margin-left: 26%;
+  margin-top: 5%;
+}
+.enterButton {
+  z-index: 4;
+  width: 10em;
+  height: 3em;
+  position: absolute;
+  margin-left: 41%;
+  margin-top: 49%;
 }
 #contact{
   text-align: center;
