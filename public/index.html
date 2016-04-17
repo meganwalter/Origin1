@@ -2,13 +2,117 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Origin1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/layout.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="vendors/styles/normalize.css" media="screen" charset="utf-8">
   </head>
   <body>
-    <h1>Tmeplates</h1>
-    <h1>Puplished.</h1>
-    <h1></h1>
+    <header class="tab header">
+      <nav class="naveEle">
+        <ul>
+          <li class="tab nav" data-content="home"><a href="/">home</a></li>
+          <li class="tab nav" data-content="coffee"><a href="/coffee">coffee</a></li>
+          <li class="tab nav" data-content="contact"><a href="/contact">contact</a></li>
+        </ul>
+      </nav>
+      <section>
+        <h2 id="headerH2">I'm the header</h2>
+      </section>
+    </header>
+    <section class="homePage tab">
+      <section class="videoContainer">
+        <video class="bgVid tab" src="media/videos/vidTest.mp4" autoplay poster="posterimage.jpg"></video>
+      </section>
+      <section class="homeBodyBox tab">
+        <section class="logo">
+          <h1 id="origin1H1">origin1<span id="cs"><br>coffee + source</br></span></h1>
+        </section>
+        <h2 class="homeQuote">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</h2>
+      </section>
+      <button type="button" class="enterButton"><a href="/coffee">enter</a></button>
+    </section>
+
+    <section id="coffeePage" class="tab">
+      <body>
+        <section class="coffeePages" id="featuredCoffee">
+            <section class="sideBar featuredEls" id="regionInfo"></section>
+            <section class="featuredEls" id="goldenCoffee"></section>
+            <section class="sideBar featuredEls" id="roasterInfo"></section>
+        </section>
+        <section class="coffeePages" id="coffeeMap">
+          <section id="mapContainer">
+            <ul id="mapMonths">
+              <li class="mapLi">january</li>
+              <li class="mapLi">january</li>
+              <li class="mapLi">january</li>
+              <li class="mapLi">january</li>
+              <li class="mapLi">january</li>
+              <li class="mapLi">january</li>
+              <li class="mapLi">january</li>
+              <li class="mapLi">january</li>
+              <li class="mapLi">january</li>
+              <li class="mapLi">january</li>
+              <li class="mapLi">january</li>
+              <li class="mapLi">january</li>
+            </ul>
+          </section>
+        </section>
+        <section class="coffeePages" id="brewMethods">
+          <section id="methodsContainer">
+            <section class="methodEls" id="brewImage"></section>
+            <section class="methodEls" id="brewSteps"></section>
+          </section>
+        </section>
+      </body>
+    </section>
+
+    <section class="tab-content tab" id="contact">
+      <h1>Contact Us</h1>
+      <p>Feel free to contact us using the form below. We’ll respond to you shortly.</p>
+      <div id="filters">
+        <select name="formTopic">
+          <option value="option">Select a topic</option>
+          <option value="general">General Inquiry</option>
+          <option value="donation">Donation</option>
+          <option value="complain">Complain</option>
+        </select>
+      </div><br>
+      <form>
+        <label>
+          <input type="text" class="formInput" placeholder="First Name" maxlength="30"required>
+        </label> <br>
+        <label>
+          <input type="text" class="formInput" placeholder="Last Name" maxlength="30" required>
+        </label> <br>
+        <label>
+          <input type="text" class="formInput" placeholder="Email Address" maxlength="30"required>
+        </label> <br>
+        <label>
+          <input type="text" class="formInput" placeholder="Phone Number" maxlength="30">
+        </label> <br>
+        <label>
+          <textarea class="formInput" rows="1"  placeholder="Questions"></textarea>
+        </label> <br>
+        <label> Subscribe to our newsletter
+          <input type="checkbox" id ="subscribe">
+        </label> <br>
+        <div id="submit">
+          <button type="submit" id="submitButton" name="button">Submit</button>
+        </div>
+      </form>
+    </section>
+    <footer class="tab footer">
+      <h3>I'm the footer</h3>
+    </footer>
     <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+    <script src="/vendors/scripts/page.js" charset="utf-8"></script>
+
+    <script src="/scripts/contactController.js" charset="utf-8"></script>
+    <script src="/scripts/contactView.js" charset="utf-8"></script>
+    <script src="/scripts/coffeePageController.js" charset="utf-8"></script>
+    <script src="/scripts/routes.js" charset="utf-8"></script>
+
     <script src="/data/sample.json" charset="utf-8"></script>
     <script src="/data/sample-country.json" charset="utf-8"></script>
     <script src="/scripts/golden.js" charset="utf-8"></script>

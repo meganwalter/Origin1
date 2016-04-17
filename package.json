@@ -26,6 +26,8 @@
     "express": "^4.13.4",
     "express-request-proxy": "^2.0.0",
     "forecast.io": "0.0.9",
-    "pg": "^4.5.3"
+    "pg": "^4.5.3",
+    "passport": "~0.3",
+    "passport-http": "~0.3"
   }
 }
