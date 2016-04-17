@@ -1,9 +1,15 @@
 .header {
   width: 100%;
-  position: absolute;
+  position: fixed;
   border: 1px dashed red;
   width: 100%;
   height: 5em;
+}
+.footer {
+  width: 100%;
+  position: absolute;
+  border: 1px dashed red;
+  height: 39em;
 }
 ul {
   list-style: none;

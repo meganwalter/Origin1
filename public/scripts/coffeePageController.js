@@ -6,7 +6,7 @@
     $('#contact').hide();
     $('#coffeePage').fadeIn(500);
     $('.header').fadeIn(500);
-    $('#footer').fadeIn(500);
+    $('.footer').fadeIn(500);
     $('.nav').fadeIn(500);
 
   }
