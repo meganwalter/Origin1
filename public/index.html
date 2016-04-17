@@ -20,30 +20,34 @@
     <section class="videoContainer">
       <video class="bgVid tab" src="media/videos/vidTest.mp4" autoplay poster="posterimage.jpg">
     </section>
-
+    
     </video>
-    <form class="tab-content" id="contact">
-      <fieldset>
-        <legend><h3>Contact Us</h3></legend>
-        <label> Name:
-          <input type="text" id="name" placeholder="Name" required>
-        </label> <br>
-        <label> Email:
-          <input type="text" id="email" placeholder="Email" required>
-        </label> <br>
-        <label> Phone Number:
-          <input type="text" id="phone" placeholder="(123) 456-789" required>
-        </label> <br>
-        <label> Questions:
-          <br>
-          <textarea id="questions" rows="5" cols="50" placeholder="Questions"></textarea>
-        </label><br>
-        <label> Subscribe to our newsletter
-          <input type="checkbox" id ="subscribe">
-        </label> <br>
-        <button type="submit" id="submitButton" name="button">Submit</button>
-      </fieldset>
-    </form>
+    <section class="tab-content" id="contact">
+    <h1>Contact Us</h1>
+    <p>Feel free to contact us using the form below. We’ll respond to you shortly.</p>
+      <form>
+          <label> First Name:
+            <input type="text" id="fname" placeholder="First Name" required>
+          </label> <br>
+          <label> Last Name:
+            <input type="text" id="lname" placeholder="Last Name" required>
+          </label> <br>
+          <label> Email Address:
+            <input type="text" id="email" placeholder="Email Address" required>
+          </label> <br>
+          <label> Phone Number:
+            <input type="text" id="phone" placeholder="123-456-789">
+          </label> <br>
+          <label> Questions:
+            <br>
+            <textarea id="questions" rows="5" cols="50" placeholder="Questions"></textarea>
+          </label> <br>
+          <label> Subscribe to our newsletter
+            <input type="checkbox" id ="subscribe">
+          </label> <br>
+          <button type="submit" id="submitButton" name="button">Submit</button>
+      </form>
+    </section>
     <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
     <script src="/vendors/scripts/page.js" charset="utf-8"></script>
 

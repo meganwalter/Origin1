@@ -16,3 +16,11 @@ ul {
 li {
   text-decoration: none;
 }
+#contact{
+  text-align: center;
+  align-content: center;
+}
+#contact form{
+  display: inline-block;
+  text-align: left;
+}
