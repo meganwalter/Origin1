@@ -1,6 +1,6 @@
 
 page('/');
-// page('/coffee', coffeeController.index);
+page('/coffee', coffeePageController.index);
 page('/contact', contactController.index);
 
 page();
