@@ -18,9 +18,17 @@ li {
 }
 #contact{
   text-align: center;
-  align-content: center;
 }
 #contact form{
-  display: inline-block;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+.formInput{
+  border: none;
+  border-bottom: .1em solid gray;
+  margin-bottom: 10px;
+}
+.formInput:focus{
+  outline: none;
+  border-bottom: .1em solid blue;
 }
