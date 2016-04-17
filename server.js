@@ -1,37 +1,39 @@
-var Forecast = require('forecast.io');
-
-// var options = {
-//   APIKey: process.env.FORECAST_API_KEY
-// },
-// forecast = new Forecast(options);
-
-// var time = new Date().setDate(0);
-// forecast.getAtTime(latitude, longitude, time, function(err, res, data) {
-//   if (err) throw err;
-//   log('res: ' + util.inspect(res));
-//   log('data: ' + util.inspect(data));
-// });
-
 var requestProxy = require('express-request-proxy'),
   express = require('express'),
   port = process.env.PORT || 3000,
   app = express();
 
-var proxyGitHub = function(request, response) {
-  console.log('Routing GitHub request for', request.params[0]);
-  (requestProxy({
-    url: 'https://api.github.com/' + request.params[0],
-    headers: { Authorization: 'token ' + process.env.GITHUB_TOKEN }
-  }))(request, response);
-};
-
-app.get('/github/*', proxyGitHub);
+var pg = require('pg');
 
 app.use(express.static(__dirname + '/public'));
 
-app.get('*', function(request, response) {
+app.get('/', function(request, response) {
   console.log('New request:', request.url);
   response.sendFile(__dirname + '/public/index.html', { root: '.' });
+});
+
+var conString = process.env.ELEPHANTSQL_URL;
+//var pg = require('pg').native
+app.get('/api/origin1', function(req, res) {
+  var results = [];
+  pg.connect(conString, function(err, client, done){
+    if (err) {
+      done();
+      console.log(err);
+      return res.status(500).json({ success: false, data: err });
+    }
+
+    var query = client.query('SELECT * FROM origin1 ORDER BY year, month ASC;');
+
+    query.on('row', function(row) {
+      results.push(row);
+    });
+
+    query.on('end', function(){
+      done();
+      return res.json(results);
+    });
+  });
 });
 
 app.listen(port, function() {

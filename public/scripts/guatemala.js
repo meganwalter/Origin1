@@ -4,15 +4,19 @@ var guatemala = {};
 
 guatemala.all = [];
 
-guatemala.getData = function() {
+var origin = {};
+
+origin.all = [];
+
+origin.getData = function() {
 
   $.ajax(
     {
-      url: '../data/sample-country.json',
+      url: '/api/origin1/',
       type: 'GET',
       success: function(data) {
-        guatemala.all = data;
-        console.log(guatemala);
+        origin.all = data;
+        console.log(origin.all);
       },
 
       error: function() {
@@ -20,11 +24,16 @@ guatemala.getData = function() {
       },
     })
     .done(function(n) {
-
+      guatemala.all = origin.all.filter(function(jsondata) {
+        return jsondata.country === 'guatemala';
+      });
     }
   );
 };
 
+origin.getData();
+
+module.origin = origin;
 module.guatemala = guatemala;
 
 })(window);
