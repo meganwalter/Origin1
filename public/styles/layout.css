@@ -84,7 +84,19 @@ color: purple;
 #mapBox {
   border: 1px dashed black;
   height: 33em;
-  background-size: cover; 
+  background-size: cover;
+}
+#rainViz {
+  width: 15em;
+  height: 15em;
+  border-radius: 10em;
+  background-color: blue;
+  opacity: .5;
+  margin-left: 16%;
+  margin-top: 22%;
+}
+.hideMe {
+  display: none;
 }
 
 #featuredCoffee{

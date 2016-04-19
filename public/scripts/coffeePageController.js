@@ -9,7 +9,10 @@
     $('.footer').fadeIn(500);
     $('.nav').fadeIn(500);
     Coffee.fetchAll(coffeeView.inItIndexPage);
+    coffeeView.mapMonths();
   }
+
+
 
   module.coffeePageController = coffeePageController;
 })(window)
