@@ -29,7 +29,7 @@ Coffee.fetchAll = function(callBack) {
     callBack();
   } else {
     $.ajax ({
-      url: "../data/guatemalaPage.json",
+      url: "../data/nicaraguaPage.json",
       method: "GET"
     }) .done(function(data, message, xhr) {
         localStorage.setItem('rawData', JSON.stringify(data));
