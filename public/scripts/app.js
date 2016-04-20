@@ -1,4 +1,6 @@
 // TODO: add controller for data storage of user contact info and deploy to firebbase
+var myFirebaseRef = new Firebase('https://origin1.firebaseio.com/Forms');
+var formsref = myFirebaseRef.push();
 var formData = [];
 
 function clearForm(event) {
@@ -16,6 +18,13 @@ $('#submitButton').on('click',function(event){
     formInput[field] = value;
   });
   formData.push(formInput);
+  formsref.set(formData, function(error) {
+    if (error) {
+      console.log('Data could not be saved' + error);
+    } else {
+      console.log('Data saved successfully');
+    }
+  });
   clearForm();
 });
 

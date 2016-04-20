@@ -149,8 +149,15 @@ color: purple;
   border: none;
   border-bottom: .1em solid gray;
   margin-bottom: 10px;
+  width: 30%;
 }
 .formInput:focus{
   outline: none;
   border-bottom: .1em solid blue;
+}
+input:required{
+  border-color: red;
+}
+input:required:valid{
+  border-color: green;
 }
