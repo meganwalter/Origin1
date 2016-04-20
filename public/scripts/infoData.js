@@ -12,8 +12,7 @@ coffeeView.inItIndexPage = function() {
 }
 coffeeView.mapMonths = function() {
   $(".mapButtons").click(function() {
-    console.log("click");
-    $("#rainViz").attr("class", "");
+    getChart();
   })
 }
 
