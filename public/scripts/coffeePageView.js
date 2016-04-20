@@ -15,9 +15,6 @@ Coffee.prototype.toHtml = function() {
   var template = Handlebars.compile(templateSrc);
   return template(this);
 };
-var guat = "guatemalaPage.json";
-var hon = "hondurasPage.json";
-var nic = "nicaraguaPage.json";
 
 var selectCountry = [guat, hon, nic];
 Coffee.all = [];
@@ -28,26 +25,34 @@ Coffee.loadAll = function(rawData) {
   });
 }
 
-Coffee.menuOption = function() {
-  var id = $('.menuOptions');
-  var idValue = id.options[id.selectedIndex].value;
-  console.log(idValue);
-}
+
+var guat = "guatemalaPage.json";
+var hon = "hondurasPage.json";
+var nic = "nicaraguaPage.json";
+var selectedVal;
+$('#coffeeCountry').change(function() {
+  var selectEl = document.getElementById("coffeeCountry");
+  selectedVal = selectEl.options[selectEl.selectedIndex].value;
+  console.log(selectedVal);
+  Coffee.fetchAll(coffeeView.inItIndexPage);
+});
+
 Coffee.fetchAll = function(callBack) {
-  if (localStorage.rawData) {
-    Coffee.loadAll(JSON.parse(localStorage.rawData));
-    callBack();
-  } else {
+  // if (localStorage.rawData) {
+  //   Coffee.loadAll(JSON.parse(localStorage.rawData));
+  //   callBack();
+  // } else {
     $.ajax ({
-      url: "../data/" + selectCountry[0],
+      url: "../data/" + selectedVal,
       method: "GET"
     }) .done(function(data, message, xhr) {
-        localStorage.setItem('rawData', JSON.stringify(data));
+        // localStorage.setItem('rawData', JSON.stringify(data));
         Coffee.loadAll(data);
         callBack();
       });
-    }
+    // }
 }
-
+// module.selectedVal = selectedVal;
+// module.guat = guat;
 module.Coffee = Coffee;
 })(window)
