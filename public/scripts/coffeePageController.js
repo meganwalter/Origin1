@@ -10,6 +10,7 @@
     $('.nav').fadeIn(500);
     Coffee.fetchAll(coffeeView.inItIndexPage);
     coffeeView.mapMonths();
+    getChart();
   }
 
 

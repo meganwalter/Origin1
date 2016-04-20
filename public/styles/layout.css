@@ -48,7 +48,7 @@ h2 {
   width: 9em;
   height: 4.5em;
   text-align: center;
-  margin-left: 42%;
+  margin-left: 43%;
   margin-top: -2%;
 }
 #origin1H1 {
@@ -61,7 +61,7 @@ h2 {
   color: white;
   text-align: center;
   width: 45%;
-  margin-left: 26%;
+  margin-left: 28%;
   margin-top: 5%;
 }
 .enterButton {
@@ -69,8 +69,8 @@ h2 {
   width: 10em;
   height: 3em;
   position: absolute;
-  margin-left: 41%;
-  margin-top: 49%;
+  margin-left: 43%;
+  margin-top: 50%;
 }
 #headerH2 {
 color: purple;
@@ -86,14 +86,8 @@ color: purple;
   height: 33em;
   background-size: cover;
 }
-#rainViz {
-  width: 15em;
-  height: 15em;
-  border-radius: 10em;
-  background-color: blue;
-  opacity: .5;
-  margin-left: 16%;
-  margin-top: 22%;
+canvas {
+  z-index: 6
 }
 .hideMe {
   display: none;
@@ -115,11 +109,14 @@ color: purple;
 #goldenCoffee {
   width: 48.5%;
 }
+#coffeeData {
+  margin-left: 101%;
+}
 #mapContainer {
   border: 1px dashed blue;
-  width: 80%;
+  width: 60%;
   height: 35em;
-  margin-left: 10%;
+  margin-left: 8%;
   margin-top: 7%;
 }
 #mapMonths {
@@ -128,7 +125,7 @@ color: purple;
 }
 .mapLi {
   border: 1px dashed green;
-  width: 7.74%;
+  width: 7.54%;
   justify-content: center;
   display: inline-flex;
   height: 2em;
