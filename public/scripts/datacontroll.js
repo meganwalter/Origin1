@@ -1,31 +1,29 @@
 (function(module) {
   var controller = {};
 
+  controller.diff = [];
+
   controller.compareProps = function(month, monthTwo) {
+    var propDiff = 0;
     for (var x in month) {
-      console.log(month[x] - monthTwo[x]);
+      if (typeof month[x] === 'number') {
+        var diff = Math.abs(month[x] - monthTwo[x]);
+        propDiff += diff;
+      }
+    }
+    return propDiff;
+  };
+
+  controller.compareYear = function(gs, ctry) {
+    for (var months in gs) {
+      var diff = controller.compareProps(gs[months], ctry[months]);
+      controller.diff.push(diff);
     }
   };
 
-  controller.compareAll = function(arr) {
-    arr.forEach(function() {
-      var a = guatemala.all[0].this;
-      var b = goldStnd.all[0].this;
-      console.log(Math.abs(a - b));
-      return Math.abs(a - b);
-    });
-  };
-
-  controller.getData = function(standard, country) {
-    country.getData();
-    standard.getData();
-  };
-
-
-  $(document).ajaxStop(function() {
-    controller.compareProps(guatemala.all[0], goldStnd.all[0]);
-    // controller.compareAll();
-  });
+  controller.countryTotal = function(diffArr){
+    diffArr.reduce()
+  }
 
   module.controller = controller;
 })(window);

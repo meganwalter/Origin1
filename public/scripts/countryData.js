@@ -31,26 +31,36 @@
         },
       })
     .done(function(n) {
-      guatemala.all = origin.all.filter(function(jsondata) {
-        return jsondata.country === 'guatemala';
-      });
-      nicaragua.all = origin.all.filter(function(jsondata) {
-        return jsondata.country === 'nicaragua';
-      });
-      honduras.all = origin.all.filter(function(jsondata) {
-        return jsondata.country === 'honduras';
-      });
-      gsguatemala.all = origin.all.filter(function(jsondata) {
-        return jsondata.country === 'gsguatemala';
-      });
-      gsnicaragua.all = origin.all.filter(function(jsondata) {
-        return jsondata.country === 'gsnicaragua';
-      });
-      gshonduras.all = origin.all.filter(function(jsondata) {
-        return jsondata.country === 'gshonduras';
-      });
+      origin.loadAll();
     }
   );
+  };
+
+  origin.loadAll = function() {
+
+    guatemala.all = origin.all.filter(function(jsondata) {
+      return jsondata.country === 'guatemala';
+    });
+
+    nicaragua.all = origin.all.filter(function(jsondata) {
+      return jsondata.country === 'nicaragua';
+    });
+
+    honduras.all = origin.all.filter(function(jsondata) {
+      return jsondata.country === 'honduras';
+    });
+
+    gsguatemala.all = origin.all.filter(function(jsondata) {
+      return jsondata.country === 'gsguatemala';
+    });
+
+    gsnicaragua.all = origin.all.filter(function(jsondata) {
+      return jsondata.country === 'gsnicaragua';
+    });
+
+    gshonduras.all = origin.all.filter(function(jsondata) {
+      return jsondata.country === 'gshonduras';
+    });
   };
 
   origin.getData();
