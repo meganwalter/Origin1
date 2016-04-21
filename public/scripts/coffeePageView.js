@@ -3,6 +3,7 @@
 var coffeeObj = [];
 
 function Coffee(infoObj) {
+  this.contryName = infoObj.contryName;
   this.countryBio = infoObj.countryBio;
   this.featuredCoffeePic = infoObj.featuredCoffeePic;
   this.featuredRoasterBio = infoObj.featuredRoasterBio;

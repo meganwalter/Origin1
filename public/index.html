@@ -4,13 +4,18 @@
     <meta charset="utf-8">
     <title>Origin1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Arapey:400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Palanquin|Rancho' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Palanquin' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Rajdhani' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="styles/layout.css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="vendors/styles/normalize.css" media="screen" charset="utf-8">
 
 
   <script id="coffeePageTemplate" type="text/x-handlebars-template">
     <section class="coffeePages" id="featuredCoffee">
-        <section class="sideBar featuredEls" id="regionInfo">{{countryBio}}</section>
+        <section class="sideBar featuredEls" id="regionInfo"><span id="countryName">{{contryName}}</span><sapn id="regionBio">{{countryBio}}</span></section>
         <section class="featuredEls" id="goldenCoffee">
           <img src="{{featuredCoffeePic}}" alt="not found" />
         </section>
@@ -61,6 +66,9 @@
 
     </select>
     <header class="tab header">
+      <section class="logo">
+        <h1 id="origin1H1">origin1<span id="cs"><br>coffee + source</br></span></h1>
+      </section>
       <nav class="naveEle">
         <ul>
           <li class="tab nav" data-content="home"><a href="/">home</a></li>
@@ -68,9 +76,7 @@
           <li class="tab nav" data-content="contact"><a href="/contact">contact</a></li>
         </ul>
       </nav>
-      <section>
-        <h2 id="headerH2">I'm the header</h2>
-      </section>
+
     </header>
     <section class="homePage tab">
       <section class="videoContainer">
@@ -81,12 +87,20 @@
         <section class="logo">
           <h1 id="origin1H1">origin1<span id="cs"><br>coffee + source</br></span></h1>
         </section>
-        <h2 class="homeQuote">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</h2>
+        <section id="bean">
+          <img id="beanImg" src="media/images/arabica-beanUse.png" alt="Not Found" />
+        </section>
+        <h2 class="homeQuote">"As soon as coffee is in your stomach, there is a general commotion. Ideas begin to move...similes arise, the paper is covered. Coffee is your ally and life ceases to be a struggle."
+
+<span id="break">Honore de Balzac</span></h2>
       </section>
-      <button type="button" class="enterButton"><a href="/coffee">enter</a></button>
+      <button type="button" class="enterButton"><a id="buttonA" href="/coffee">enter</a></button>
     </section>
 
     <section id="coffeePage" class="tab">
+      <section id="coffeePageBG">
+
+      </section>
       <section id="goldenInfo"></section>
     </section>
 
