@@ -31,16 +31,17 @@ h2 {
 .videoContainer {
   width: 98.7%;
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   -webkit-box-shadow: inset 0px 2px 102px -3px rgba(0,0,0,0.75);
   -moz-box-shadow: inset 0px 2px 102px -3px rgba(0,0,0,0.75);
   box-shadow: inset 0px 2px 102px -3px rgba(0,0,0,0.75);
 }
 .homeBodyBox {
+  /*background-image: url(../media/images/paperBag.jpg);*/
   width: 100%;
   height: 48.5%;
   margin-top: 30%;
-  background-color: hsla(37, 100%, 83%, 0.47);
+  background-color: hsla(277, 100%, 1%, 0.32);
   z-index: 3;
   position: absolute;
   -webkit-box-shadow:  0px 26px 101px -10px rgba(0,0,0,0.75);
@@ -129,12 +130,19 @@ color: purple;
   z-index: 2;
 }
 #coffeePageBG {
-  background-image: url(../media/images/paperBag.jpg);
+  background-color: hsla(32, 100%, 95%, 1);
+  /*background-image: url(../media/images/paperBag.jpg);*/
   width: 100%;
   height: 132.3em;
   position: absolute;
-  background-color: red;
   z-index: 1;
+}
+#countryName {
+  font-size: 2em;
+}
+#regionInfo{
+  font-size: 1em;
+  text-align: center;
 }
 #mapBox {
   border: 1px dashed black;
