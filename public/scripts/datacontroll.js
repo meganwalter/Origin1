@@ -1,14 +1,15 @@
 (function(module) {
   var controller = {};
 
-  controller.diff = [];
-
   controller.compareProps = function(month, monthTwo) {
     var propDiff = 0;
     for (var x in month) {
-      if (typeof month[x] === 'number' && x !== 'year') {
+      if (typeof month[x] === 'number' && x !== 'year' && x !== 'precipitation') {
         var diff = Math.abs(month[x] - monthTwo[x]);
         propDiff += diff;
+      } else if (x === 'precipitation') {
+        var pdiff = 50 * Math.abs(month[x] - monthTwo[x]);
+        propDiff += pdiff;
       }
     }
     return propDiff;

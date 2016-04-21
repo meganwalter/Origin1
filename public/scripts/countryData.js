@@ -1,19 +1,12 @@
 (function(module) {
-
   var origin = {};
   origin.all = [];
-  var guatemala = {};
-  guatemala.all = [];
-  var nicaragua = {};
-  nicaragua.all = [];
-  var honduras = {};
-  honduras.all = [];
-  var gsguatemala = {};
-  gsguatemala.all = [];
-  var gsnicaragua = {};
-  gsnicaragua.all = [];
-  var gshonduras = {};
-  gshonduras.all = [];
+  var guatemala = [];
+  var nicaragua = [];
+  var honduras = [];
+  var gsguatemala = [];
+  var gsnicaragua = [];
+  var gshonduras = [];
 
   origin.getData = function() {
 
@@ -32,38 +25,48 @@
       })
     .done(function(n) {
       origin.loadAll();
+      origin.compareAll(guatemala, gsguatemala, nicaragua, gsnicaragua, honduras, gshonduras);
     }
   );
   };
 
   origin.loadAll = function() {
 
-    guatemala.all = origin.all.filter(function(jsondata) {
+    guatemala = origin.all.filter(function(jsondata) {
       return jsondata.country === 'guatemala';
     });
 
-    nicaragua.all = origin.all.filter(function(jsondata) {
+    nicaragua = origin.all.filter(function(jsondata) {
       return jsondata.country === 'nicaragua';
     });
 
-    honduras.all = origin.all.filter(function(jsondata) {
+    honduras = origin.all.filter(function(jsondata) {
       return jsondata.country === 'honduras';
     });
 
-    gsguatemala.all = origin.all.filter(function(jsondata) {
+    gsguatemala = origin.all.filter(function(jsondata) {
       return jsondata.country === 'gsguatemala';
     });
 
-    gsnicaragua.all = origin.all.filter(function(jsondata) {
+    gsnicaragua = origin.all.filter(function(jsondata) {
       return jsondata.country === 'gsnicaragua';
     });
 
-    gshonduras.all = origin.all.filter(function(jsondata) {
+    gshonduras = origin.all.filter(function(jsondata) {
       return jsondata.country === 'gshonduras';
     });
   };
 
   origin.getData();
+
+  origin.compareAll = function(one, gsone, two, gstwo, three, gsthree) {
+    var diffArr = [];
+    diffArr.push(controller.countryTotal(one, gsone));
+    diffArr.push(controller.countryTotal(two, gstwo));
+    diffArr.push(controller.countryTotal(three, gsthree));
+    
+  };
+
 
   module.origin = origin;
   module.guatemala = guatemala;
