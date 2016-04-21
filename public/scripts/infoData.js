@@ -10,10 +10,13 @@ coffeeView.inItIndexPage = function() {
     $('#goldenInfo').append(a.toHtml());
   })
 }
-coffeeView.mapMonths = function() {
-  $(".mapButtons").click(function() {
-    getChart();
-  })
+
+coffeeView.mapMonths = function(){
+ $('#mapButtons').on('click', 'li', function(){
+   weatherChart.currentChart.destroy();
+   var clickedMonth = 1 + months.indexOf($(this).data('content'));
+   weatherChart.buildchart(clickedMonth);
+ })
 }
 
 module.coffeeView = coffeeView
