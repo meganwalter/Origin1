@@ -64,7 +64,7 @@
     diffArr.push(controller.countryTotal(one, gsone));
     diffArr.push(controller.countryTotal(two, gstwo));
     diffArr.push(controller.countryTotal(three, gsthree));
-    
+
   };
 
 
