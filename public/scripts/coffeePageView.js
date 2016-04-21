@@ -16,6 +16,7 @@ Coffee.prototype.toHtml = function() {
   return template(this);
 };
 
+var selectCountry = [guat, hon, nic];
 Coffee.all = [];
 
 Coffee.loadAll = function(rawData) {
@@ -23,21 +24,42 @@ Coffee.loadAll = function(rawData) {
       return new Coffee(pd)
   });
 }
+
+
+var guat = "guatemalaPage.json";
+var hon = "hondurasPage.json";
+var nic = "nicaraguaPage.json";
+var selectedVal;
+// $('#coffeeCountry').change(function() {
+//   var selectEl = document.getElementById("coffeeCountry");
+//   selectedVal = selectEl.options[selectEl.selectedIndex].value;
+//   console.log(selectedVal);
+  //   Coffee.fetchAll(coffeeView.inItIndexPage);
+  // });
+
 Coffee.fetchAll = function(callBack) {
-  if (localStorage.rawData) {
+  var eTag;
+  if (localStorage.rawData && eTag == eTag) {
+    console.log("if etag: " + eTag);
     Coffee.loadAll(JSON.parse(localStorage.rawData));
     callBack();
-  } else {
+
+} else {
     $.ajax ({
       url: "../data/guatemalaPage.json",
       method: "GET"
-    }) .done(function(data, message, xhr) {
+    })
+     .done(function(data, message, xhr) {
+        eTag = xhr.getResponseHeader('ETag')
+        console.log(eTag);
         localStorage.setItem('rawData', JSON.stringify(data));
         Coffee.loadAll(data);
         callBack();
-      });
-    }
-}
+    })
+  }
 
+};
+// module.selectedVal = selectedVal;
+// module.guat = guat;
 module.Coffee = Coffee;
 })(window)
