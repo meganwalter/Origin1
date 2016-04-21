@@ -1,12 +1,15 @@
 (function(module) {
   var origin = {};
   origin.all = [];
-  var guatemala = [];
-  var nicaragua = [];
-  var honduras = [];
-  var gsguatemala = [];
-  var gsnicaragua = [];
-  var gshonduras = [];
+  var guatemala = {};
+  var nicaragua = {};
+  var honduras = {};
+  guatemala.all = [];
+  nicaragua.all = [];
+  honduras.all = [];
+  guatemala.gs = [];
+  nicaragua.gs = [];
+  honduras.gs = [];
 
   origin.getData = function() {
 
@@ -25,46 +28,46 @@
       })
     .done(function(n) {
       origin.loadAll();
-      origin.compareAll(guatemala, gsguatemala, nicaragua, gsnicaragua, honduras, gshonduras);
+      origin.compareAll(guatemala, nicaragua, honduras);
     }
   );
   };
 
   origin.loadAll = function() {
 
-    guatemala = origin.all.filter(function(jsondata) {
+    guatemala.all = origin.all.filter(function(jsondata) {
       return jsondata.country === 'guatemala';
     });
 
-    nicaragua = origin.all.filter(function(jsondata) {
+    nicaragua.all = origin.all.filter(function(jsondata) {
       return jsondata.country === 'nicaragua';
     });
 
-    honduras = origin.all.filter(function(jsondata) {
+    honduras.all = origin.all.filter(function(jsondata) {
       return jsondata.country === 'honduras';
     });
 
-    gsguatemala = origin.all.filter(function(jsondata) {
+    guatemala.gs = origin.all.filter(function(jsondata) {
       return jsondata.country === 'gsguatemala';
     });
 
-    gsnicaragua = origin.all.filter(function(jsondata) {
+    nicaragua.gs = origin.all.filter(function(jsondata) {
       return jsondata.country === 'gsnicaragua';
     });
 
-    gshonduras = origin.all.filter(function(jsondata) {
+    honduras.gs = origin.all.filter(function(jsondata) {
       return jsondata.country === 'gshonduras';
     });
   };
 
   origin.getData();
 
-  origin.compareAll = function(one, gsone, two, gstwo, three, gsthree) {
+  origin.compareAll = function(one, two, three) {
     var diffArr = [];
-    diffArr.push(controller.countryTotal(one, gsone));
-    diffArr.push(controller.countryTotal(two, gstwo));
-    diffArr.push(controller.countryTotal(three, gsthree));
-
+    diffArr.push(controller.countryTotal(one, one.gs));
+    diffArr.push(controller.countryTotal(two, two.gs));
+    diffArr.push(controller.countryTotal(three, three.gs));
+    console.log(diffArr);
   };
 
 
