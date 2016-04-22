@@ -1,30 +1,44 @@
 (function(module) {
 
-var barData = {
-labels: ['Rain', 'Temp', 'Himidity'],
-datasets: [
-{
-   label: '2010 customers #',
-   fillColor: '#382765',
-   data: [2500, 1902, 1041, 610, 1245, 952]
-},
-{
-   label: '2010 customers #',
-   fillColor: '#382765',
-   data: [2500, 1902, 1041, 610, 1245, 952]
-},
-{
-   label: '2014 customers #',
-   fillColor: '#7BC225',
-   data: [3104, 1689, 1318, 589, 1199, 1436]
-}
-]
-};
-function getChart() {
-var ctx = document.getElementById('coffeeData').getContext('2d');
+var weatherChart = {};
 
-var coffeeChart = new Chart(ctx).Bar(barData);
-}
+weatherChart.currentChart = undefined;
 
-module.getChart = getChart;
-})(window)
+weatherChart.buildchart = function (clicked) {
+
+  var barData = {
+  labels: ['precipitation', 'avgtemp', 'humidity'],
+  datasets: [
+  {
+     label: 'guatemala',
+     fillColor: 'green',
+     data: []
+  },
+  {
+     label: 'nicaragua',
+     fillColor: 'blue',
+     data: []
+  },
+  {
+     label: 'honduras',
+     fillColor: 'red',
+     data: []
+  }
+  ]
+  };
+
+  var labels = barData.labels;
+  console.log(guatemala.all[0]);
+  for (label in labels) {
+    var x = labels[label];
+    barData.datasets[0].data.push(guatemala.all[clicked][x]);
+    barData.datasets[1].data.push(nicaragua.all[clicked][x]);
+    barData.datasets[2].data.push(honduras.all[clicked][x]);
+  }
+   var ctx = document.getElementById('coffeeData').getContext('2d');
+   var coffeeChart = new Chart(ctx).Bar(barData);
+   weatherChart.currentChart = coffeeChart;
+ };
+
+module.weatherChart = weatherChart;
+})(window);
