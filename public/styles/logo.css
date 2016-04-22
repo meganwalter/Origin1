@@ -1,0 +1,65 @@
+.logo {
+  font-family: 'Rancho', cursive;
+  /* font-family: 'Palanquin', sans-serif; */
+  /* font-family: 'Rajdhani', sans-serif; */
+  font-size: 2em;
+  position: absolute;
+  z-index: 5;
+  border: 2px solid white;
+  width: 5em;
+  height: 3.2em;
+  text-align: center;
+  margin-left: 42%;
+  margin-top: -2%;
+  -webkit-box-shadow: 0px -24px 46px -4px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px -24px 46px -4px rgba(0,0,0,0.75);
+box-shadow: 0px -24px 46px -4px rgba(0,0,0,0.75);
+
+}
+#cs {
+  font-size: .6em;
+}
+#beanImg {
+  position: absolute;
+
+}
+#bean {
+  margin-left: 46%;
+  margin-top: -6.5%;
+  position: absolute;
+  -webkit-transform: translate(32px) rotate(30deg);
+  z-index: 4;
+  -webkit-box-shadow: 0px 0px 138px 8px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 138px 8px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 138px 8px rgba(0,0,0,0.75);
+}
+
+.logoL {
+  font-family: 'Rancho', cursive;
+  /* font-family: 'Palanquin', sans-serif; */
+  /* font-family: 'Rajdhani', sans-serif; */
+  font-size: 2em;
+  position: absolute;
+  z-index: 5;
+  border: 2px solid white;
+  width: 5em;
+  height: 3.2em;
+  text-align: center;
+  margin-left: 41.8%;
+  margin-top: 28%;
+  -webkit-box-shadow: 0px -24px 46px -4px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px -24px 46px -4px rgba(0,0,0,0.75);
+box-shadow: 0px -24px 46px -4px rgba(0,0,0,0.75);
+
+}
+
+#beanL {
+  margin-left: 46%;
+  margin-top: 23.5%;
+  position: absolute;
+  -webkit-transform: translate(32px) rotate(30deg);
+  z-index: 5;
+  -webkit-box-shadow: 0px 0px 138px 8px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 138px 8px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 138px 8px rgba(0,0,0,0.75);
+}
