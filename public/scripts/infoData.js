@@ -12,9 +12,12 @@ coffeeView.inItIndexPage = function() {
 }
 
 coffeeView.mapMonths = function(){
- $('#mapButtons').on('click', 'li', function(){
-   weatherChart.currentChart.destroy();
-   var clickedMonth = 1 + months.indexOf($(this).data('content'));
+  var months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+ $('#mapMonths').on('click', 'button', function(){
+   if (weatherChart.currentChart) {
+     weatherChart.currentChart.destroy();
+   }
+   var clickedMonth = months.indexOf($(this).data('content'));
    weatherChart.buildchart(clickedMonth);
  })
 }
