@@ -7,10 +7,6 @@ var pg = require('pg');
 
 app.use(express.static(__dirname + '/public'));
 
-app.get('/', function(request, response) {
-  console.log('New request:', request.url);
-  response.sendFile(__dirname + '/public/index.html', { root: '.' });
-});
 
 var conString = process.env.ELEPHANTSQL_URL;
 //var pg = require('pg').native
@@ -34,6 +30,11 @@ app.get('/api/origin1', function(req, res) {
       return res.json(results);
     });
   });
+});
+
+app.get('*', function(request, response) {
+  console.log('New request:', request.url);
+  response.sendFile('public/index.html', { root: '.' });
 });
 
 app.listen(port, function() {
