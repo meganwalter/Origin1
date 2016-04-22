@@ -14,6 +14,7 @@
 
 
   <script id="coffeePageTemplate" type="text/x-handlebars-template">
+    <section id="coffeePageContainer">
     <section class="coffeePages" id="featuredCoffee">
         <section class="sideBar featuredEls" id="regionInfo"><span id="countryName">{{contryName}}</span><sapn id="regionBio">{{countryBio}}</span></section>
         <section class="featuredEls" id="goldenCoffee">
@@ -53,12 +54,14 @@
         <section class="methodEls" id="brewSteps">{{brewInstructions}}</section>
       </section>
     </section>
+  </section>
   </script>
 
 
 
   </head>
   <body>
+
     <select id="coffeeCountry" name="Country">
       <option class="menuOptions" value="guatemalaPage.json">Guatemala</option>
       <option class="menuOptions" value="hondurasPage.json">Honduras</option>
@@ -84,17 +87,28 @@
         <video class="bgVid tab" src="media/videos/vidTest.mp4" autoplay></video>
       </section>
       <section class="homeBodyBox tab">
-        <section class="logo">
+        <section class="logo ">
           <h1 id="origin1H1">origin1<span id="cs"><br>coffee + source</br></span></h1>
         </section>
         <section id="bean">
           <img id="beanImg" src="media/images/arabica-beanUse.png" alt="Not Found" />
         </section>
-        <h2 class="homeQuote">"As soon as coffee is in your stomach, there is a general commotion. Ideas begin to move...similes arise, the paper is covered. Coffee is your ally and life ceases to be a struggle."
+        <h2 class="homeQuote ">"As soon as coffee is in your stomach, there is a general commotion. Ideas begin to move...similes arise, the paper is covered. Coffee is your ally and life ceases to be a struggle."
 
-<span id="break">Honore de Balzac</span></h2>
+      <span id="break">Honore de Balzac</span></h2>
       </section>
       <button type="button" class="enterButton"><a id="buttonA" href="/coffee">enter</a></button>
+      <section class="loadEl" id="loadSec">
+        <section class="logoL loadEl">
+          <h1 id="origin1H1L">origin1<span id="cs"><br>coffee + source</br></span></h1>
+        </section>
+        <section id="beanL" class="loadEl">
+          <img id="beanImg" src="media/images/arabica-beanUse.png" alt="Not Found" />
+        </section>
+        <!-- <h2 class="homeQuoteL loadEl">"As soon as coffee is in your stomach, there is a general commotion. Ideas begin to move...similes arise, the paper is covered. Coffee is your ally and life ceases to be a struggle." -->
+
+      </section>
+
     </section>
 
     <section id="coffeePage" class="tab">
@@ -142,6 +156,8 @@
     <footer class="tab footer">
       <h3>I'm the footer</h3>
     </footer>
+    <section class="loadEl" id="loadSec"></section>
+
     <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
     <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
@@ -165,6 +181,8 @@
     <script src="/data/sample.json" charset="utf-8"></script>
     <script src="/data/sample-country.json" charset="utf-8"></script>
     <script src="/scripts/datacontroll.js" charset="utf-8"></script>
+    <script src="/scripts/appLoad.js" charset="utf-8"></script>
+
     <script src="/scripts/countryData.js" charset="utf-8"></script>
   </body>
 </html>
