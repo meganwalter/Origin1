@@ -1,6 +1,8 @@
 (function(module) {
   var origin = {};
   origin.all = [];
+  origin.winner = '';
+  origin.diff = 1000000;
   var guatemala = {};
   var nicaragua = {};
   var honduras = {};
@@ -10,6 +12,9 @@
   guatemala.gs = [];
   nicaragua.gs = [];
   honduras.gs = [];
+  guatemala.diff = 0;
+  nicaragua.diff = 0;
+  honduras.diff = 0;
 
   origin.getData = function() {
 
@@ -63,20 +68,23 @@
   origin.getData();
 
   origin.compareAll = function(one, two, three) {
-    var diffArr = [];
-    diffArr.push(controller.countryTotal(one, one.gs));
-    diffArr.push(controller.countryTotal(two, two.gs));
-    diffArr.push(controller.countryTotal(three, three.gs));
-    console.log(diffArr);
-  };
+    one.diff = controller.countryTotal(one.all, one.gs);
+    two.diff = controller.countryTotal(two.all, two.gs);
+    three.diff = controller.countryTotal(three.all, three.gs);
+    var arr = [one, two, three];
+    for (var i in arr) {
+      if (arr[i].diff < origin.diff) {
+        origin.diff = arr[i].diff;
+        origin.winner = arr[i].all[0].country;
+      }
+    }
 
+    console.log(origin.winner);
+  };
 
   module.origin = origin;
   module.guatemala = guatemala;
   module.nicaragua = nicaragua;
   module.honduras = honduras;
-  module.gsguatemala = gsguatemala;
-  module.gsnicaragua = gsnicaragua;
-  module.gshonduras = gshonduras;
 
 })(window);
