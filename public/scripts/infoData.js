@@ -1,26 +1,27 @@
 (function(module) {
-var coffeeView = {};
+  var coffeeView = {};
 
-$(document).ready(function() {
-  $('#contact').hide();
-});
+  $(document).ready(function() {
+    $('#contact').hide();
+    $('#coffeePage').hide();
+  });
 
-coffeeView.inItIndexPage = function() {
-  Coffee.all.forEach(function(a) {
-    $('#goldenInfo').append(a.toHtml());
-  })
-}
+  coffeeView.inItIndexPage = function() {
+    Coffee.all.forEach(function(a) {
+      $('#goldenInfo').append(a.toHtml());
+    });
+  }
 
-coffeeView.mapMonths = function(){
-  var months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
- $('#mapMonths').on('click', 'button', function(){
-   if (weatherChart.currentChart) {
-     weatherChart.currentChart.destroy();
-   }
-   var clickedMonth = months.indexOf($(this).data('content'));
-   weatherChart.buildchart(clickedMonth);
- })
-}
+  coffeeView.mapMonths = function(){
+    var months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+   $('#mapMonths').on('click', 'button', function(){
+     if (weatherChart.currentChart) {
+       weatherChart.currentChart.destroy();
+     }
+     var clickedMonth = months.indexOf($(this).data('content'));
+     weatherChart.buildchart(clickedMonth);
+   })
+  }
 
-module.coffeeView = coffeeView
+  module.coffeeView = coffeeView;
 })(window);
