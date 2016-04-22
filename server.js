@@ -32,7 +32,7 @@ app.get('/api/origin1', function(req, res) {
   });
 });
 
-app.get('*', function(request, response) {
+app.get('/', function(request, response) {
   console.log('New request:', request.url);
   response.sendFile('public/index.html', { root: '.' });
 });
