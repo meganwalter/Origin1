@@ -34,6 +34,8 @@ $('#coffeeCountry').change(function() {
   selectedVal = selectEl.options[selectEl.selectedIndex].value;
   selectedName = selectEl.options[selectEl.selectedIndex].text;
   Coffee.fetchAll(coffeeView.inItIndexPage);
+  weatherChart.buildchart(0);
+  coffeeView.mapMonths();
   });
 
   $(function() {
