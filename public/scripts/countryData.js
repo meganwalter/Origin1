@@ -1,19 +1,20 @@
 (function(module) {
-
   var origin = {};
   origin.all = [];
+  origin.winner = '';
+  origin.diff = 1000000;
   var guatemala = {};
-  guatemala.all = [];
   var nicaragua = {};
-  nicaragua.all = [];
   var honduras = {};
+  guatemala.all = [];
+  nicaragua.all = [];
   honduras.all = [];
-  var gsguatemala = {};
-  gsguatemala.all = [];
-  var gsnicaragua = {};
-  gsnicaragua.all = [];
-  var gshonduras = {};
-  gshonduras.all = [];
+  guatemala.gs = [];
+  nicaragua.gs = [];
+  honduras.gs = [];
+  guatemala.diff = 0;
+  nicaragua.diff = 0;
+  honduras.diff = 0;
 
   origin.getData = function() {
 
@@ -32,6 +33,7 @@
       })
     .done(function(n) {
       origin.loadAll();
+      origin.compareAll(guatemala, nicaragua, honduras);
     }
   );
   };
@@ -50,27 +52,39 @@
       return jsondata.country === 'honduras';
     });
 
-    gsguatemala.all = origin.all.filter(function(jsondata) {
+    guatemala.gs = origin.all.filter(function(jsondata) {
       return jsondata.country === 'gsguatemala';
     });
 
-    gsnicaragua.all = origin.all.filter(function(jsondata) {
+    nicaragua.gs = origin.all.filter(function(jsondata) {
       return jsondata.country === 'gsnicaragua';
     });
 
-    gshonduras.all = origin.all.filter(function(jsondata) {
+    honduras.gs = origin.all.filter(function(jsondata) {
       return jsondata.country === 'gshonduras';
     });
   };
 
   origin.getData();
 
+  origin.compareAll = function(one, two, three) {
+    one.diff = controller.countryTotal(one.all, one.gs);
+    two.diff = controller.countryTotal(two.all, two.gs);
+    three.diff = controller.countryTotal(three.all, three.gs);
+    var arr = [one, two, three];
+    for (var i in arr) {
+      if (arr[i].diff < origin.diff) {
+        origin.diff = arr[i].diff;
+        origin.winner = arr[i].all[0].country;
+      }
+    }
+
+    console.log(origin.winner);
+  };
+
   module.origin = origin;
   module.guatemala = guatemala;
   module.nicaragua = nicaragua;
   module.honduras = honduras;
-  module.gsguatemala = gsguatemala;
-  module.gsnicaragua = gsnicaragua;
-  module.gshonduras = gshonduras;
 
 })(window);
