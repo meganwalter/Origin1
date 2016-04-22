@@ -26,11 +26,9 @@ Coffee.loadAll = function(rawData) {
 }
 
 
-var guat = "guatemalaPage.json";
-var hon = "hondurasPage.json";
-var nic = "nicaraguaPage.json";
-var selectedVal
-    ,selectedName;
+
+var selectedVal = "guatemalaPage.json"
+var selectedName;
 $('#coffeeCountry').change(function() {
   var selectEl = document.getElementById("coffeeCountry");
   selectedVal = selectEl.options[selectEl.selectedIndex].value;
@@ -38,8 +36,9 @@ $('#coffeeCountry').change(function() {
   Coffee.fetchAll(coffeeView.inItIndexPage);
   });
 
-  var eTag = 1;
-  var ETag;
+  $(function() {
+    Coffee.fetchAll(coffeeView.inItIndexPage);
+  });
 Coffee.fetchAll = function(callBack) {
   $('#goldenInfo').children().remove();
 
@@ -53,9 +52,7 @@ Coffee.fetchAll = function(callBack) {
     })
      .done(function(data, message, xhr) {
        console.log(selectedName);
-        eTag = xhr.getResponseHeader('ETag')
-        localStorage.setItem(selectedName, JSON.stringify(data), eTag);
-        localStorage.setItem('ETag', eTag);
+        localStorage.setItem(selectedName, JSON.stringify(data));
         Coffee.loadAll(data);
         callBack();
     })
@@ -63,6 +60,5 @@ Coffee.fetchAll = function(callBack) {
 
 };
 module.selectedVal = selectedVal;
-module.guat = guat;
 module.Coffee = Coffee;
 })(window)
