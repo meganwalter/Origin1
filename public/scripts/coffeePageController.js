@@ -4,7 +4,9 @@
   coffeePageController.index = function() {
     $('.tab').hide();
     $('#contact').hide();
+    $('.naveEle').fadeIn(500);
     $('#coffeePage').fadeIn(500);
+    $('#coffeeCountry').fadeIn(500);
     $('.header').fadeIn(500);
     $('.footer').fadeIn(500);
     $('.nav').fadeIn(500);

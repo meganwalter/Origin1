@@ -4,6 +4,9 @@
   $(document).ready(function() {
     $('#contact').hide();
     $('#coffeePage').hide();
+    $('#coffeeCountry').hide();
+    $('.footer').hide();
+    $('.naveEle').hide();
   });
 
   coffeeView.inItIndexPage = function() {
