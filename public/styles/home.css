@@ -1,16 +1,19 @@
 .videoContainer {
-  width: 98.7%;
+  width: 100%;
   position: absolute;
   z-index: 3;
   -webkit-box-shadow: inset 0px 2px 102px -3px rgba(0,0,0,0.75);
   -moz-box-shadow: inset 0px 2px 102px -3px rgba(0,0,0,0.75);
   box-shadow: inset 0px 2px 102px -3px rgba(0,0,0,0.75);
 }
+.bgVid{
+  width: 100%;
+}
 .homeBodyBox {
   background-image: url(../media/images/paperBag.jpg);
   width: 100%;
-  height: 48.5%;
-  margin-top: 30%;
+  height: 80%;
+  margin-top: 45%;
   background-color: hsla(277, 100%, 1%, 0.32);
   z-index: 3;
   position: absolute;
@@ -24,9 +27,10 @@
   font-size: 1.5em;
   color: white;
   text-align: center;
-  width: 47%;
-  margin-left: 25.5%;
-  margin-top: 7%;
+  width: 67%;
+  margin: auto;
+  /*margin-left: 25.5%;*/
+  margin-top: 10%;
   line-height: 1.5em;
   z-index: 5;
 }
@@ -36,12 +40,12 @@ display: block;
 .enterButton {
   background-color: hsla(27, 65%, 34%, 0);
   font-size: 2em;
-  z-index: 4;
+  z-index: 5;
   width: 3em;
   height: 1.5em;
-  position: absolute;
+  position: relative;
   margin-left: 44.9%;
-  margin-top: 50%;
+  margin-top: 65%;
   border-style: hidden;
 }
 #buttonA {
