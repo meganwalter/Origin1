@@ -26,8 +26,7 @@ Coffee.loadAll = function(rawData) {
 }
 
 
-
-var selectedVal = "guatemalaPage.json"
+var selectedVal;
 var selectedName;
 $('#coffeeCountry').change(function() {
   var selectEl = document.getElementById("coffeeCountry");
@@ -37,6 +36,7 @@ $('#coffeeCountry').change(function() {
   });
 
   $(function() {
+    selectedVal = "guatemalaPage.json"
     Coffee.fetchAll(coffeeView.inItIndexPage);
   });
 Coffee.fetchAll = function(callBack) {
