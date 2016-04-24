@@ -19,14 +19,24 @@
 
   <script id="coffeePageTemplate" type="text/x-handlebars-template">
     <section id="coffeePageContainer">
-    <section class="coffeePages" id="featuredCoffee">
-        <section class="sideBar featuredEls" id="regionInfo"><span id="countryName">{{contryName}}</span><sapn id="regionBio">{{countryBio}}</span></section>
-        <section class="featuredEls" id="goldenCoffee">
+      <section class="coffeePages" id="featuredCoffee">
+        <img id ="regionBanner" src="/media/images/dguatemalaBanner.jpg" alt="banner" />
+
+      <section class="sideBar featuredEls" id="regionInfo"><span id="countryName">{{contryName}}</span><sapn id="regionBio">{{countryBio}}</span></section>
+        <section id="roasterHead">
+          <h1 id="roasterH1">The Cup we like!</h1>
+          <img id ="downArrow" src="/media/images/downArrow.png" alt="arrow" />
+        </section>
+        <section class="sideBar featuredEls roaster" id="roasterInfo">{{featuredRoasterBio}}</section>
+        <section class="featuredEls roaster" id="goldenCoffee">
           <img src="{{featuredCoffeePic}}" alt="not found" />
         </section>
-        <section class="sideBar featuredEls" id="roasterInfo">{{featuredRoasterBio}}</section>
     </section>
 
+    <section id="mapHead">
+      <h1 id="mapH1">The matter of Weather</h1>
+      <img id ="mapDownArrow" src="/media/images/mapDownArrow.png" alt="arrow" />
+    </section>
     <section class="coffeePages" id="coffeeMap">
       <section id="mapContainer">
         <ul id="mapMonths">
@@ -50,6 +60,10 @@
       </section>
       </section>
     </section>
+    <section id="brewHead">
+      <h1 id="brewH1">How we Brew it</h1>
+      <img id ="straightArrowLeft" src="/media/images/straightArrowLeft.png" alt="arrow" />
+    </section>
     <section class="coffeePages" id="brewMethods">
       <section id="methodsContainer">
         <section class="methodEls" id="brewImage">
@@ -65,7 +79,6 @@
 
   </head>
   <body>
-
     <select id="coffeeCountry" name="Country">
       <option class="menuOptions" value="guatemalaPage.json">Guatemala</option>
       <option class="menuOptions" value="hondurasPage.json">Honduras</option>
@@ -102,23 +115,22 @@
       <span id="break">Honore de Balzac</span></h2>
       </section>
       <button type="button" class="enterButton"><a id="buttonA" href="/coffee">enter</a></button>
-      <section class="loadEl" id="loadSec">
+      <!-- <section class="loadEl" id="loadSec">
         <section class="logoL loadEl">
           <h1 id="origin1H1L">origin1<span id="cs"><br>coffee + source</br></span></h1>
         </section>
         <section id="beanL" class="loadEl">
           <img id="beanImg" src="media/images/arabica-beanUse.png" alt="Not Found" />
-        </section>
-      <!-- <h2 class="homeQuoteL loadEl">"As soon as coffee is in your stomach, there is a general commotion. Ideas begin to move...similes arise, the paper is covered. Coffee is your ally and life ceases to be a struggle." -->
+        </section> -->
 
       </section>
 
     </section>
 
     <section id="coffeePage" class="tab">
-      <section id="coffeePageBG">
+      <!-- <section id="coffeePageBG">
 
-      </section>
+      </section> -->
       <section id="goldenInfo"></section>
     </section>
 
@@ -160,7 +172,7 @@
     <footer class="tab footer">
       <h3>I'm the footer</h3>
     </footer>
-    <section class="loadEl" id="loadSec"></section>
+    <!-- <section class="loadEl" id="loadSec"></section> -->
 
     <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
     <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>

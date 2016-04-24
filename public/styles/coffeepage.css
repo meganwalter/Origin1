@@ -1,21 +1,79 @@
+#coffeePageContainer{
+  position: absolute;
+}
 #featuredCoffee{
-}
-.featuredEls {
   border: 1px dashed blue;
-  margin-left: 1em;
-  height: 35em;
-  display: flex;
+  margin-left: 4em;
+  height: 93em;
+  display: block;
   margin-top: 9%;
-}
-.sideBar {
-  width: 23%;
+  width: 90%;
 }
 #goldenCoffee {
+  border: 1px dashed blue;
+  margin-left: 33em;
+  height: 40%;;
+  display: inline-block;
   width: 48.5%;
 }
-#coffeeData {
-  margin-left: 101%;
+#regionInfo {
+  border: 1px dashed green;
+  height: 35em;
 }
+#roasterHead {
+  width: 90%;
+  margin-left: 2em;
+  height: 18em;
+}
+#mapHead {
+  width: 90%;
+  margin-left: 2em;
+  height: 18em;
+}
+#roasterH1 {
+  text-align: center;
+  margin-right: 48%;
+  font-size: 4em;
+}
+#mapH1 {
+  text-align: center;
+  font-size: 4em;
+  float: right;
+}
+#downArrow {
+  float: right;
+  margin-top: -12%;
+  margin-right: 21%;
+}
+#mapDownArrow {
+  float: left;
+  margin-top: 7%;
+  margin-left: 26%;
+}
+#straightArrowLeft {
+  float: left;
+  margin-top: -4%;
+  margin-left: 26%;
+}
+#brewHead {
+  width: 90%;
+  height: 18em;
+}
+#brewH1 {
+  text-align: center;
+  font-size: 4em;
+}
+.roaster {
+}
+#roasterInfo {
+  border: 1px dashed green;
+  width: 41%;
+  height: 40%;
+  position: absolute;
+  margin-left: 2%;
+  display: inline-flex;
+}
+
 #mapContainer {
   border: 1px dashed blue;
   width: 60%;
@@ -34,8 +92,7 @@
   display: inline-flex;
   height: 2em;
 }
-#brewMethods {
-}
+
 #methodsContainer {
   border: 1px dashed blue;
   width: 80%;
