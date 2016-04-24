@@ -92,7 +92,6 @@ canvas {
 .hideMe {
   display: none;
 }
-<<<<<<< HEAD
 #navButton img{
   width: 2em;
   height: 2.5em;
@@ -133,10 +132,8 @@ canvas {
   padding-right: 75em;
   padding-top: 2.1em;
 }
-=======
 #coffeeCountry {
   margin-left: 92%;
   z-index: 7;
   position: absolute;
   display: inline-block;}
->>>>>>> 0d544cec06e0b2d5343a037bfa6ceba6ca85550c
