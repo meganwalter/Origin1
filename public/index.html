@@ -127,39 +127,48 @@
     </section>
 
     <section class="tab" id="contact">
-      <h1>Contact Us</h1>
-      <p>Feel free to contact us using the form below. We’ll respond to you shortly.</p>
-      <form>
-        <div id="filters">
-          <select name="formTopic">
-            <option value="option" id="option">Select a topic</option>
-            <option value="general" id="general">General Inquiry</option>
-            <option value="donation" id="donation">Donate</option>
-            <option value="complain" id="complain">Complain</option>
-          </select>
-        </div><br>
-        <label>
-          <input type="text" id="fname" class="formInput" placeholder="First Name" maxlength="20"required>
-        </label> <br>
-        <label>
-          <input type="text" id="lname" class="formInput" placeholder="Last Name" maxlength="20" required>
-        </label> <br>
-        <label>
-          <input type="email" id="email" class="formInput" placeholder="Email Address" maxlength="25" required>
-        </label> <br>
-        <label>
-          <input type="tel" id="number" class="formInput" placeholder="Phone Number (optional)" maxlength="15">
-        </label> <br>
-        <label>
-          <textarea class="formInput" id="comment" rows="1"  placeholder="What's on your mind? (optional)" maxlength="250"></textarea>
-        </label> <br>
-        <label> Subscribe to our newsletter
-          <input type="checkbox" id ="subscribe">
-        </label> <br>
-        <div id="submit">
-          <button type="submit" id="submitButton" name="button">Submit</button>
-        </div>
-      </form>
+      <div id="mission">
+        <h1>Mission Statement</h1>
+        <p>Origin1's mission is to identify the coffee whose flavor will best reflect its origin.</p>
+      </div>
+      <div id="cform">
+        <h1>Contact Us</h1>
+        <p>Feel free to contact us using the form below. We’ll respond to you shortly.</p>
+        <form>
+          <div id="filters">
+            <select name="formTopic">
+              <option value="option" id="option">Select a topic</option>
+              <option value="general" id="general">General Inquiry</option>
+              <option value="donation" id="donation">Donate</option>
+              <option value="complain" id="complain">Complain</option>
+            </select>
+          </div><br>
+          <label>
+            <input type="text" id="fname" class="formInput" placeholder="First Name" maxlength="20"required>
+            <span class="error">Uh oh this field is required</span>
+          </label> <br>
+          <label>
+            <input type="text" id="lname" class="formInput" placeholder="Last Name" maxlength="20" required>
+            <span class="error">Uh oh this field is required</span>
+          </label> <br>
+          <label>
+            <input type="email" id="email" class="formInput" placeholder="Email Address" maxlength="25" required>
+            <span class="error">Uh oh this field is required</span>
+          </label> <br>
+          <label>
+            <input type="tel" id="number" class="formInput" placeholder="Phone Number (optional)" maxlength="15">
+          </label> <br>
+          <label>
+            <textarea class="formInput" id="comment" rows="1"  placeholder="What's on your mind? (optional)" maxlength="250"></textarea>
+          </label> <br>
+          <label> Subscribe to our newsletter
+            <input type="checkbox" id ="subscribe">
+          </label> <br>
+          <div id="submit">
+            <button type="submit" id="submitButton" name="button">Submit</button>
+          </div>
+        </form>
+      </div>
     </section>
     <footer class="tab footer">
       <h3>I'm the footer</h3>
