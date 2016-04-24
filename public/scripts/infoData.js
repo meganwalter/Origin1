@@ -7,6 +7,7 @@
     $('#coffeeCountry').hide();
     $('.footer').hide();
     $('.naveEle').hide();
+    $('.fluff').hide();
   });
 
   $('.navCollapsed').on('click', function() {
