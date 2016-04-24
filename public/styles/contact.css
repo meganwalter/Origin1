@@ -1,5 +1,7 @@
 #contact{
   text-align: center;
+  padding-top: 5.5em;
+  padding-right: 2.2em;
 }
 #contact form{
   display: flex;
@@ -7,17 +9,45 @@
 }
 .formInput{
   border: none;
-  border-bottom: .1em solid gray;
+  border-bottom: .1em solid black;
   margin-bottom: 10px;
   width: 30%;
 }
 .formInput:focus{
   outline: none;
-  border-bottom: .1em solid blue;
+  border-bottom: .1em solid black;
 }
 input:required{
   border-color: red;
 }
 input:required:valid{
-  border-color: green;
+  border-color: black;
+}
+#submitButton{
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 1em;
+  color: white;
+  width: 13%;
+  cursor: pointer;
+}
+#submitButton:hover{
+   color: black;
+   outline: 0;
+   background-color: transparent;
+}
+#filters select{
+  border: none;
+  width: 30%;
+  border-bottom: .1em solid black;
+}
+#filters select:focus{
+  outline: none;
+}
+.error{
+  display: none;
+  visibility: hidden;
+}
+.errorShow{
+	visibility: visible;
 }

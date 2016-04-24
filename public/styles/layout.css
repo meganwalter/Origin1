@@ -1,5 +1,6 @@
 body{
   font-family: 'Palanquin', sans-serif;
+  overflow: auto;
 }
 canvas {
   margin-left: 101%;
@@ -14,6 +15,7 @@ canvas {
   -moz-box-shadow: inset 0px 46px 55px -30px rgba(0,0,0,0.75);
   box-shadow: inset 0px 46px 55px -30px rgba(0,0,0,0.75);
   z-index: 3;
+  display: table;
 }
 #loadSec {
   width: 100%;
@@ -30,10 +32,9 @@ canvas {
 }
 ul {
   list-style: none;
-}
-.naveEle {
-  z-index: 2;
-  position:absolute;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 1.9em;
+  padding-top: 1.9em;
 }
 li {
   text-decoration: none;
@@ -75,6 +76,7 @@ h2 {
   font-size: 5em;
   margin-left: -8%;
   margin-bottom: -8%;
+  font-family: 'Architects Daughter', cursive;
 }
 #regionInfo{
   font-size: 2em;
@@ -90,8 +92,51 @@ canvas {
 .hideMe {
   display: none;
 }
+<<<<<<< HEAD
+#navButton img{
+  width: 2em;
+  height: 2.5em;
+  padding-left: .75em;
+}
+.navCollapsed {
+  position:fixed;
+  cursor:pointer;
+}
+.navCollapsed ul{
+  position:fixed;
+  visibility: hidden;
+}
+.navExpanded {
+  text-align:center;
+  line-height:5em;
+  height:100%;
+  width:100%;
+  position: fixed;
+  top:0;
+  left:0;
+  background-color:rgba(0,0,0,0.80);
+  overflow: hidden;
+}
+.navExpanded ul {
+  position:relative;
+  visibility: visible;
+}
+.navExpanded a {
+  text-decoration:none;
+  color:white;
+  font-size:3em;
+}
+.navExpanded a:hover {
+  color: blue;
+}
+.navExpanded #navButton img {
+  padding-right: 75em;
+  padding-top: 2.1em;
+}
+=======
 #coffeeCountry {
   margin-left: 92%;
   z-index: 7;
   position: absolute;
   display: inline-block;}
+>>>>>>> 0d544cec06e0b2d5343a037bfa6ceba6ca85550c

@@ -1,4 +1,4 @@
-// TODO: add controller for data storage of user contact info and deploy to firebbase
+// DONE: add controller for data storage of user contact info and deploy to firebbase
 var myFirebaseRef = new Firebase('https://origin1.firebaseio.com/Forms');
 var formsref = myFirebaseRef.push();
 var formData = [];
@@ -10,7 +10,7 @@ function clearForm(event) {
 }
 
 $('#submitButton').on('click',function(event){
-  event.preventDefault();
+  validateForm();
   var formInput = {};
   $('form').find('input, select, textarea').each(function() {
     var field = $(this).attr('id');
@@ -27,6 +27,39 @@ $('#submitButton').on('click',function(event){
   });
   clearForm();
 });
+
+function validateForm(event) {
+  var x = $('#fname').val();
+  if (x === null || x === '') {
+    $('form span').removeClass('error');
+    $('form span').addClass('errorShow');
+    event.preventDefault();
+  } else {
+    $('form span').removeClass('errorShow');
+    $('form span').addClass('error');
+  }
+  var y = $('#lname').val();
+  if(y === null || y === ''){
+    $('form span').removeClass('error');
+    $('form span').addClass('errorShow');
+    event.preventDefault();
+  } else {
+    $('form span').removeClass('errorShow');
+    $('form span').addClass('error');
+  }
+  var z = $('#email').val();
+  if(z === null || z === ''){
+    $('form span').removeClass('error');
+    $('form span').addClass('errorShow');
+    event.preventDefault();
+  }else {
+    $('form span').removeClass('errorShow');
+    $('form span').addClass('error');
+  }
+  return false;
+}
+
+
 
 
 
