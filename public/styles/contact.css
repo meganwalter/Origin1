@@ -31,6 +31,10 @@ input:required:valid{
   width: 13%;
   cursor: pointer;
 }
+#mission {
+  width: 65%;
+  margin-left: 17%;
+}
 #submitButton:hover{
    color: black;
    outline: 0;
