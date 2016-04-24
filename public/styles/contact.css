@@ -48,7 +48,6 @@ input:required:valid{
   display: none;
   visibility: hidden;
 }
-
 .errorShow{
 	visibility: visible;
 }
