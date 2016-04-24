@@ -1,0 +1,60 @@
+#featuredCoffee{
+  border: 1px dashed blue;
+  margin-left: 1em;
+  height: 35em;
+  display: block;;
+  margin-top: 9%;
+  width: 80%;
+}
+#goldenCoffee {
+  border: 1px dashed blue;
+  margin-left: 1em;
+  height: 35em;
+  display: block;;
+  margin-top: 9%;
+  width: 48.5%;
+}
+
+#coffeeData {
+  margin-left: 101%;
+}
+#mapContainer {
+  border: 1px dashed blue;
+  width: 60%;
+  height: 35em;
+  margin-left: 8%;
+  margin-top: 7%;
+}
+#mapMonths {
+  padding: 0;
+  margin: 0;
+}
+.mapLi {
+  border: 1px dashed green;
+  width: 7.54%;
+  justify-content: center;
+  display: inline-flex;
+  height: 2em;
+}
+#brewMethods {
+}
+#methodsContainer {
+  border: 1px dashed blue;
+  width: 80%;
+  height: 35em;
+  margin-left: 10%;
+  margin-top: 7%;
+}
+.methodEls {
+  display: inline-block;
+}
+#brewImage {
+  border: 1px dashed green;
+  width: 29%;
+  height: 35em;
+}
+#brewSteps {
+  border: 1px dashed yellow;
+  width: 70%;
+  height: 35em;
+}
