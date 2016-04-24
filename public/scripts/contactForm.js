@@ -1,4 +1,4 @@
-// TODO: add controller for data storage of user contact info and deploy to firebbase
+// DONE: add controller for data storage of user contact info and deploy to firebbase
 var myFirebaseRef = new Firebase('https://origin1.firebaseio.com/Forms');
 var formsref = myFirebaseRef.push();
 var formData = [];
@@ -26,6 +26,10 @@ $('#submitButton').on('click',function(event){
     }
   });
   clearForm();
+});
+
+$('.navCollapsed').on('click', function() {
+  $(this).toggleClass('navExpanded');
 });
 
 
