@@ -2,7 +2,6 @@
   position: absolute;
 }
 #featuredCoffee{
-  border: 1px dashed blue;
   margin-left: 4em;
   height: 93em;
   display: block;
@@ -10,7 +9,6 @@
   width: 90%;
 }
 #goldenCoffee {
-  border: 1px dashed blue;
   margin-left: 33em;
   height: 40%;;
   display: inline-block;
@@ -21,7 +19,6 @@
 
 }
 #regionInfo {
-  border: 1px dashed green;
   height: 17em;
 }
 #roasterHead {
@@ -77,16 +74,16 @@
 }
 #roasterInfo {
   font-size: 2em;
-  border: 1px dashed green;
   width: 41%;
   height: 40%;
   position: absolute;
   margin-left: 2%;
   display: inline-flex;
+  color: white;
+
 }
 
 #mapContainer {
-  border: 1px dashed blue;
   width: 60%;
   height: 35em;
   margin-left: 8%;
@@ -97,7 +94,6 @@
   margin: 0;
 }
 .mapLi {
-  border: 1px dashed green;
   width: 7.54%;
   justify-content: center;
   display: inline-flex;
@@ -105,7 +101,6 @@
 }
 
 #methodsContainer {
-  border: 1px dashed blue;
   width: 80%;
   height: 35em;
   margin-left: 10%;
@@ -115,12 +110,12 @@
   display: inline-block;
 }
 #brewImage {
-  border: 1px dashed green;
   width: 29%;
   height: 35em;
 }
 #brewSteps {
-  border: 1px dashed yellow;
+  font-size: 3em;
   width: 70%;
   height: 35em;
+  color: brown;
 }
