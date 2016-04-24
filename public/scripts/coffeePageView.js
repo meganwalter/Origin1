@@ -26,16 +26,15 @@
   }
 
 
-
-  var selectedVal = "guatemalaPage.json";
-  var selectedName = "guatemala";
+  var selectedVal = "nicaraguaPage.json";
+  var selectedName = origin.winner;
   $('#coffeeCountry').change(function() {
     $('.golden').hide();
     var selectEl = document.getElementById("coffeeCountry");
     selectedVal = selectEl.options[selectEl.selectedIndex].value;
     selectedName = selectEl.options[selectEl.selectedIndex].text;
     Coffee.fetchAll(coffeeView.inItIndexPage);
-    if (selectedName === 'Guatemala') {
+    if (selectedName.toLowerCase() === origin.winner) {
       $('.golden').fadeIn();
     } else {
         console.log(selectedName);

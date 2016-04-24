@@ -25,7 +25,7 @@
       <section class="sideBar featuredEls" id="regionInfo"><h1 id="countryName">{{contryName}}</h1><h3 id="regionBio">{{countryBio}}</h3></section>
         <section id="roasterHead">
           <h1 id="roasterH1">The Cup we like!</h1>
-          <img id ="downArrow" src="/media/images/downArrow.png" alt="arrow" />
+          <img id ="downArrow" class="arrows" src="/media/images/downArrow.png" alt="arrow" />
         </section>
         <section class="sideBar featuredEls roaster" id="roasterInfo">{{featuredRoasterBio}}</section>
         <section class="featuredEls roaster" id="goldenCoffee">
@@ -35,7 +35,7 @@
 
     <section id="mapHead">
       <h1 id="mapH1">The matter of Weather</h1>
-      <img id ="mapDownArrow" src="/media/images/mapDownArrow.png" alt="arrow" />
+      <img id ="mapDownArrow" class="arrows" src="/media/images/mapDownArrow.png" alt="arrow" />
     </section>
     <section class="coffeePages" id="coffeeMap">
       <section id="mapContainer">
@@ -62,7 +62,7 @@
     </section>
     <section id="brewHead">
       <h1 id="brewH1">How we Brew it</h1>
-      <img id ="straightArrowLeft" src="/media/images/straightArrowLeft.png" alt="arrow" />
+      <img id ="straightArrowLeft" class="arrows" src="/media/images/straightArrowLeft.png" alt="arrow" />
     </section>
     <section class="coffeePages" id="brewMethods">
       <section id="methodsContainer">
@@ -80,17 +80,19 @@
   </head>
   <body>
     <select id="coffeeCountry" name="Country">
-      <option class="menuOptions" value="guatemalaPage.json">Guatemala</option>
-      <option class="menuOptions" value="hondurasPage.json">Honduras</option>
       <option class="menuOptions" value="nicaraguaPage.json">Nicaragua</option>
+      <option class="menuOptions" value="hondurasPage.json">Honduras</option>
+      <option class="menuOptions" value="guatemalaPage.json">Guatemala</option>
 
     </select>
     <header class="tab header">
+      <a href="/">
       <section class="logo">
         <h1 id="origin1H1">origin1<span id="cs"><br>coffee + source</br></span></h1>
       </section>
       <div class="navCollapsed">
         <div id="navButton">
+        </a>
           <img src="media/images/arabica-beanUse.png"/>
         </div>
         <nav>
@@ -119,13 +121,7 @@
       <span id="break">Honore de Balzac</span></h2>
       </section>
       <button type="button" class="enterButton"><a id="buttonA" href="/coffee">enter</a></button>
-      <!-- <section class="loadEl" id="loadSec">
-        <section class="logoL loadEl">
-          <h1 id="origin1H1L">origin1<span id="cs"><br>coffee + source</br></span></h1>
-        </section>
-        <section id="beanL" class="loadEl">
-          <img id="beanImg" src="media/images/arabica-beanUse.png" alt="Not Found" />
-        </section> -->
+
 
       </section>
 
@@ -147,7 +143,7 @@
     <section class="tab" id="contact">
       <div id="mission">
         <h1>Mission Statement</h1>
-        <p>Origin1's mission is to identify the coffee whose flavor will best reflect its origin.</p>
+        <p id="mission">Here at Origin1, we believe that good coffee should reflect the ground it comes from and the people who tend it. The flavor of a coffee's origin should be the most prominent and the first thing you experience when taking your first sip of any cup of joe. Origin1 seeks to be able to give you the most origin specifc cup by tracking global weather patterns and bringing you the pleasure of tasting the beans from the region having their gold standard of years. We love coffee, and know you will too.</p>
       </div>
       <div id="cform">
         <h1>Contact Us</h1>
@@ -188,9 +184,9 @@
         </form>
       </div>
     </section>
-    <footer class="tab footer">
+    <!-- <footer class="tab footer">
       <h3>I'm the footer</h3>
-    </footer>
+    </footer> -->
     <!-- <section class="loadEl" id="loadSec"></section> -->
 
     <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>

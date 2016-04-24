@@ -6,11 +6,15 @@
   height: 10em;
   position: absolute;
   display: block;
-  z-index: 6;
+  z-index: 2;
   margin-top: 4%;
   font-size: 2em;
   margin-left: 26%;
   color: whitesmoke;
+}
+.arrows {
+  z-index: 3;
+  opacity: .7;
 }
 #goldenStraightArrowLeft {
    float: left;
