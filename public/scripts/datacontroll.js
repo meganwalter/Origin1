@@ -2,30 +2,33 @@
   var controller = {};
 
   controller.compareProps = function(month, monthTwo) {
+    var propDiff = 0;
     for (var x in month) {
-      console.log(month[x] - monthTwo[x]);
+      if (typeof month[x] === 'number' && x !== 'year' && x !== 'precipitation') {
+        var diff = Math.abs(month[x] - monthTwo[x]);
+        propDiff += diff;
+      } else if (x === 'precipitation') {
+        var pdiff = 50 * Math.abs(month[x] - monthTwo[x]);
+        propDiff += pdiff;
+      }
     }
+    return propDiff;
   };
 
-  controller.compareAll = function(arr) {
-    arr.forEach(function() {
-      var a = guatemala.all[0].this;
-      var b = goldStnd.all[0].this;
-      console.log(Math.abs(a - b));
-      return Math.abs(a - b);
+  controller.compareYear = function(gs, ctry) {
+    var variance = [];
+    for (var months in gs) {
+      var diff = controller.compareProps(gs[months], ctry[months]);
+      variance.push(diff);
+    }
+    return variance;
+  };
+
+  controller.countryTotal = function(gs, ctry) {
+    return controller.compareYear(gs, ctry).reduce(function(a, b) {
+      return a + b;
     });
   };
-
-  controller.getData = function(standard, country) {
-    country.getData();
-    standard.getData();
-  };
-
-
-  $(document).ajaxStop(function() {
-    controller.compareProps(guatemala.all[0], goldStnd.all[0]);
-    // controller.compareAll();
-  });
 
   module.controller = controller;
 })(window);
