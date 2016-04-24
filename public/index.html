@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Origin1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arapey:400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Palanquin|Rancho' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Palanquin' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Rajdhani' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="vendors/styles/normalize.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="styles/layout.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="styles/home.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="styles/contact.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="styles/logo.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="styles/coffeepage.css" media="screen" charset="utf-8">
+
+
+  <script id="coffeePageTemplate" type="text/x-handlebars-template">
+    <section id="coffeePageContainer">
+      <section class="coffeePages" id="featuredCoffee">
+
+      <section class="sideBar featuredEls" id="regionInfo"><h1 id="countryName">{{contryName}}</h1><h3 id="regionBio">{{countryBio}}</h3></section>
+        <section id="roasterHead">
+          <h1 id="roasterH1">The Cup we like!</h1>
+          <img id ="downArrow" class="arrows" src="/media/images/downArrow.png" alt="arrow" />
+        </section>
+        <section class="sideBar featuredEls roaster" id="roasterInfo">{{featuredRoasterBio}}</section>
+        <section class="featuredEls roaster" id="goldenCoffee">
+          <img src="{{featuredCoffeePic}}" alt="not found" />
+        </section>
+    </section>
+
+    <section id="mapHead">
+      <h1 id="mapH1">The matter of Weather</h1>
+      <img id ="mapDownArrow" class="arrows" src="/media/images/mapDownArrow.png" alt="arrow" />
+    </section>
+    <section class="coffeePages" id="coffeeMap">
+      <section id="mapContainer">
+        <ul id="mapMonths">
+          <li class="mapLi"><button class="mapButtons" data-content="january" id="january" type="button" name="button">january</button></li>
+          <li class="mapLi"><button class="mapButtons" data-content="february" id="february" type="button" name="button">february</button></li>
+          <li class="mapLi"><button class="mapButtons" data-content="march" id="march" type="button" name="button">march</button></li>
+          <li class="mapLi"><button class="mapButtons" data-content="april" id="april" type="button" name="button">april</button></li>
+          <li class="mapLi"><button class="mapButtons" data-content="may" id="may" type="button" name="button">may</button></li>
+          <li class="mapLi"><button class="mapButtons" data-content="june"id="june" type="button" name="button">june</button></li>
+          <li class="mapLi"><button class="mapButtons" data-content="july" id="july" type="button" name="button">july</button></li>
+          <li class="mapLi"><button class="mapButtons" data-content="august" id="august" type="button" name="button">august</button></li>
+          <li class="mapLi"><button class="mapButtons" data-content="september" id="september" type="button" name="button">september</button></li>
+          <li class="mapLi"><button class="mapButtons" data-content="october" id="october" type="button" name="button">october</button></li>
+          <li class="mapLi"><button class="mapButtons" data-content="november" id="november" type="button" name="button">november</button></li>
+          <li class="mapLi"><button class="mapButtons" data-content="december"id="december" type="button" name="button">december</button></li>
+        </ul>
+
+
+      <section id="mapBox" style="background-image: url({{map}})">
+        <canvas id="coffeeData" width="300" height="525"></canvas>
+      </section>
+      </section>
+    </section>
+    <section id="brewHead">
+      <h1 id="brewH1">How we Brew it</h1>
+      <img id ="straightArrowLeft" class="arrows" src="/media/images/straightArrowLeft.png" alt="arrow" />
+    </section>
+    <section class="coffeePages" id="brewMethods">
+      <section id="methodsContainer">
+        <section class="methodEls" id="brewImage">
+          <img src="{{brewPic}}" alt="not found" />
+        </section>
+        <section class="methodEls" id="brewSteps">{{brewInstructions}}</section>
+      </section>
+    </section>
+  </section>
+  </script>
+
+
+
+  </head>
+  <body>
+    <select id="coffeeCountry" name="Country">
+      <option class="menuOptions" value="nicaraguaPage.json">Nicaragua</option>
+      <option class="menuOptions" value="hondurasPage.json">Honduras</option>
+      <option class="menuOptions" value="guatemalaPage.json">Guatemala</option>
+
+    </select>
+    <header class="tab header">
+      <a href="/">
+      <section class="logo">
+        <h1 id="origin1H1">origin1<span id="cs"><br>coffee + source</br></span></h1>
+      </section>
+      <div class="navCollapsed">
+        <div id="navButton">
+        </a>
+          <img src="media/images/arabica-beanUse.png"/>
+        </div>
+        <nav>
+          <ul>
+            <li class="tab nav" data-content="home"><a href="/">Home</a></li>
+            <li class="tab nav" data-content="coffee"><a href="/coffee">Coffee</a></li>
+            <li class="tab nav" data-content="contact"><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="homePage tab">
+      <section class="videoContainer">
+
+        <video class="bgVid tab" src="media/videos/vidTest.mp4" autoplay></video>
+      </section>
+      <section class="homeBodyBox tab">
+        <section class="logo ">
+          <h1 id="origin1H1">origin1<span id="cs"><br>coffee + source</br></span></h1>
+        </section>
+        <section id="bean">
+          <img id="beanImg" src="media/images/arabica-beanUse.png" alt="Not Found" />
+        </section>
+        <h2 class="homeQuote ">"As soon as coffee is in your stomach, there is a general commotion. Ideas begin to move...similes arise, the paper is covered. Coffee is your ally and life ceases to be a struggle."
+
+      <span id="break">Honore de Balzac</span></h2>
+      </section>
+      <button type="button" class="enterButton"><a id="buttonA" href="/coffee">enter</a></button>
+
+
+      </section>
+
+    </section>
+
+    <section id="coffeePage" class="tab">
+      <section id="coffeePageBG">
+
+      </section>
+      <section class="golden">
+        <h1>The Origin1 Country!</h1>
+        <img id ="goldenStraightArrowRight" src="/media/images/straightArrowRight.png" alt="arrow" />
+        <img id ="goldenStraightArrowLeft" src="/media/images/straightArrowLeft.png" alt="arrow" />
+
+      </section>
+      <section id="goldenInfo"></section>
+    </section>
+
+    <section class="tab" id="contact">
+      <div id="mission">
+        <h1>Mission Statement</h1>
+        <p id="mission">Here at Origin1, we believe that good coffee should reflect the ground it comes from and the people who tend it. The flavor of a coffee's origin should be the most prominent and the first thing you experience when taking your first sip of any cup of joe. Origin1 seeks to be able to give you the most origin specifc cup by tracking global weather patterns and bringing you the pleasure of tasting the beans from the region having their gold standard of years. We love coffee, and know you will too.</p>
+      </div>
+      <div id="cform">
+        <h1>Contact Us</h1>
+        <p>Feel free to contact us using the form below. We’ll respond to you shortly.</p>
+        <form>
+          <div id="filters">
+            <select name="formTopic">
+              <option value="option" id="option">Select a topic</option>
+              <option value="general" id="general">General Inquiry</option>
+              <option value="donation" id="donation">Donate</option>
+              <option value="complain" id="complain">Complain</option>
+            </select>
+          </div><br>
+          <label>
+            <input type="text" id="fname" class="formInput" placeholder="First Name" maxlength="20"required>
+            <span class="error">Uh oh this field is required</span>
+          </label> <br>
+          <label>
+            <input type="text" id="lname" class="formInput" placeholder="Last Name" maxlength="20" required>
+            <span class="error">Uh oh this field is required</span>
+          </label> <br>
+          <label>
+            <input type="email" id="email" class="formInput" placeholder="Email Address" maxlength="25" required>
+            <span class="error">Uh oh this field is required</span>
+          </label> <br>
+          <label>
+            <input type="tel" id="number" class="formInput" placeholder="Phone Number (optional)" maxlength="15">
+          </label> <br>
+          <label>
+            <textarea class="formInput" id="comment" rows="1"  placeholder="What's on your mind? (optional)" maxlength="250"></textarea>
+          </label> <br>
+          <label> Subscribe to our newsletter
+            <input type="checkbox" id ="subscribe">
+          </label> <br>
+          <div id="submit">
+            <button type="submit" id="submitButton" name="button">Submit</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- <footer class="tab footer">
+      <h3>I'm the footer</h3>
+    </footer> -->
+    <!-- <section class="loadEl" id="loadSec"></section> -->
+
+    <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+    <script src="/vendors/scripts/chart.js"></script>
+
+    <script src="/vendors/scripts/page.js" charset="utf-8"></script>
+    <script src="/scripts/countryData.js" charset="utf-8"></script>
+    <script src="/scripts/contactController.js" charset="utf-8"></script>
+    <script src="/scripts/contactForm.js" charset="utf-8"></script>
+
+    <script src="/scripts/coffeePageView.js" charset="utf-8"></script>
+    <script src="/scripts/infoData.js" charset="utf-8"></script>
+
+    <script src="/scripts/coffeePageController.js" charset="utf-8"></script>
+
+    <script src="/scripts/routes.js" charset="utf-8"></script>
+    <script src="/scripts/chartController.js" charset="utf-8"></script>
+
+    <script src="/scripts/datacontroll.js" charset="utf-8"></script>
+    <script src="/scripts/appLoad.js" charset="utf-8"></script>
+
+    <script src="/scripts/countryData.js" charset="utf-8"></script>
+  </body>
+</html>
