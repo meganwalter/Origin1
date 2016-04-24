@@ -1,10 +1,13 @@
 body{
   font-family: 'Palanquin', sans-serif;
 }
+canvas {
+  margin-left: 101%;
+}
 
 .header {
   width: 100%;
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 5em;
   -webkit-box-shadow: inset 0px 46px 55px -30px rgba(0,0,0,0.75);
@@ -23,8 +26,7 @@ body{
 .footer {
   width: 100%;
   position: absolute;
-  border: 1px dashed red;
-  height: 39em;
+  height: 15em;
 }
 ul {
   list-style: none;
@@ -57,27 +59,28 @@ h2 {
   position: relative;
   width: 100%;
   height: 44em;
-  border: 1px dashed red;
   display: flex;
   z-index: 2;
+  margin-top: 20%;
 }
 #coffeePageBG {
-  background-color: hsla(32, 100%, 95%, 1);
-  /*background-image: url(../media/images/paperBag.jpg);*/
+  /*background-color: hsla(32, 100%, 95%, 1);*/
+  background-image: url(../media/images/paperBag.jpg);
   width: 100%;
-  height: 132.3em;
+  height: 240em;
   position: absolute;
   z-index: 1;
 }
 #countryName {
-  font-size: 2em;
+  font-size: 5em;
+  margin-left: -8%;
+  margin-bottom: -8%;
 }
 #regionInfo{
-  font-size: 1em;
+  font-size: 2em;
   text-align: center;
 }
 #mapBox {
-  border: 1px dashed black;
   height: 33em;
   background-size: cover;
 }
@@ -87,3 +90,8 @@ canvas {
 .hideMe {
   display: none;
 }
+#coffeeCountry {
+  margin-left: 92%;
+  z-index: 7;
+  position: absolute;
+  display: inline-block;}
