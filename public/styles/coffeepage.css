@@ -1,6 +1,30 @@
 #coffeePageContainer{
   position: absolute;
 }
+.golden {
+  width: 90%;
+  height: 10em;
+  position: absolute;
+  display: block;
+  z-index: 6;
+  margin-top: 4%;
+  font-size: 2em;
+  margin-left: 26%;
+  color: whitesmoke;
+}
+#goldenStraightArrowLeft {
+   float: left;
+   margin-top: -7%;
+   margin-left: 32%;
+   width: 2em;
+
+}
+#goldenStraightArrowRight {
+  float: left;
+  margin-top: -7%;
+  margin-left: 8%;
+  width: 2em;
+}
 #featuredCoffee{
   margin-left: 4em;
   height: 93em;

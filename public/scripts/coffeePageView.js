@@ -30,10 +30,16 @@
   var selectedVal = "guatemalaPage.json";
   var selectedName = "guatemala";
   $('#coffeeCountry').change(function() {
+    $('.golden').hide();
     var selectEl = document.getElementById("coffeeCountry");
     selectedVal = selectEl.options[selectEl.selectedIndex].value;
     selectedName = selectEl.options[selectEl.selectedIndex].text;
     Coffee.fetchAll(coffeeView.inItIndexPage);
+    if (selectedName === 'Guatemala') {
+      $('.golden').fadeIn();
+    } else {
+        console.log(selectedName);
+    }
     weatherChart.buildchart(0);
     coffeeView.mapMonths();
     });
