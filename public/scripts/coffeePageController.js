@@ -12,9 +12,9 @@
     $('.nav').fadeIn(500);
     Coffee.fetchAll(coffeeView.inItIndexPage);
     coffeeView.mapMonths();
-    $(document).ajaxStop(function () {
-      weatherChart.buildchart(0);
-    })
+    weatherChart.buildchart(0);
+    // $(document).ajaxStop(function () {
+    // })
   }
 
   module.coffeePageController = coffeePageController;
